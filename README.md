@@ -7,7 +7,7 @@ Zero-shot cross-domain dialogue state tracking (DST) enables us to handle task-o
 ## Dependency
 Check the packages needed or simply run the command
 ```console
-❱❱❱ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Experiments
