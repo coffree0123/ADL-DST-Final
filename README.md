@@ -13,29 +13,13 @@ Check the packages needed or simply run the command
 ## Experiments
 **Dataset**
 ```console
-python create_data.py
+make create_data
 ```
 use create_data_2_1.py if want to run with multiwoz2.1
 
-**Zero-shot cross-domain**
+**Full-shot training**
 ```console
-python T5.py --train_batch_size 16 --GPU 8 --except_domain ${domain} --slot_lang ${description type}
-```
-* --GPU: the number of gpu to use
-* --except_domain: hold out domain, choose one from [hotel, train, attraction, restaurant, taxi]
-* --slot_lang: slot description type, choose one from [none, human, naive, value, question, slottype]
-* Note: real batch_size = train_batch_size * GPU_number * gradient_accumulation_steps
-
-**Few-shot cross-domain**
-```console
-python T5.py --train_batch_size 16 --GPU 8 --slot_lang slottype --model_checkpoint ${checkpoint} --n_epochs 15 --fewshot 0.01 --mode finetune
-```
-* --model_checkpoint: saved checkpoint of zero-shot model
-* --fewshot: ratio of in-domain data, choose one from [0.01, 0.05, 0.1]
-
-**Full-shot**
-```console
-python T5.py --train_batch_size 16 --GPU 8 --slot_lang slottype --n_epochs 15
+make train
 ```
 
 

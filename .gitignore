@@ -1,3 +1,5 @@
 .vscode
 data
 test.py
+save
+__pycache__
