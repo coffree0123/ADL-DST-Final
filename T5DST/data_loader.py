@@ -50,7 +50,7 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
             random.Random(args["seed"]).shuffle(dials)
             dials = dials[:int(len(dials)*args["fewshot"])]
 
-        for dial_dict in dials:
+        for dial_dict in tqdm(dials):
             dialog_history = ""
 
             # Counting domains
