@@ -8,7 +8,7 @@ import pytorch_lightning as pl
 from pytorch_lightning import Trainer, seed_everything
 from transformers import (AdamW, T5Tokenizer, BartTokenizer, BartForConditionalGeneration,
                           T5ForConditionalGeneration, WEIGHTS_NAME, CONFIG_NAME)
-from data_loader import prepare_data
+from data_loader import prepare_testdata
 from config import get_args
 from evaluate import evaluate_metrics
 import json
@@ -88,7 +88,55 @@ class DST_Seq2Seq(pl.LightningModule):
         return AdamW(self.parameters(), lr=self.lr, correct_bias=True)
 
 
-def train(args, *more):
+def predict(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="zeroshot"):
+    save_path = os.path.join(save_path, "results")
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+    predictions = {}
+    # to gpu
+    # gpu = args["GPU"][0]
+    device = torch.device("cuda:0")
+    model.to(device)
+    model.eval()
+
+    with torch.no_grad():
+        count = 0
+        for batch in tqdm(test_loader):
+            count += 1
+            if (count == 5):
+                break
+
+            dst_outputs = model.generate(input_ids=batch["encoder_input"].to(device),
+                                         attention_mask=batch["attention_mask"].to(
+                device),
+                eos_token_id=tokenizer.eos_token_id,
+                max_length=200,
+            )
+
+            value_batch = tokenizer.batch_decode(
+                dst_outputs, skip_special_tokens=True)
+
+            for idx, value in enumerate(value_batch):
+                dial_id = batch["ID"][idx]
+                if dial_id not in predictions:
+                    predictions[dial_id] = {}
+                    predictions[dial_id]["domain"] = batch["domains"][idx][0]
+                    predictions[dial_id]["turns"] = {}
+                if batch["turn_id"][idx] not in predictions[dial_id]["turns"]:
+                    predictions[dial_id]["turns"][batch["turn_id"][idx]] = {
+                        "turn_belief": batch["turn_belief"][idx], "pred_belief": []}
+
+                if value != "none":
+                    predictions[dial_id]["turns"][batch["turn_id"][idx]]["pred_belief"].append(
+                        str(batch["slot_text"][idx])+'-'+str(value))
+
+    with open(os.path.join(save_path, f"prediction.json"), 'w') as f:
+        json.dump(predictions, f, indent=4)
+
+    return predictions
+
+
+def test(args, *more):
     args = vars(args)
     args["model_name"] = args["model_checkpoint"]+args["model_name"]+"_except_domain_"+args["except_domain"] + "_slotlang_" + \
         str(args["slot_lang"]) + "_lr_" + str(args["lr"]) + "_epoch_" + \
@@ -111,105 +159,21 @@ def train(args, *more):
 
     task = DST_Seq2Seq(args, tokenizer, model)
 
-    train_loader, val_loader, test_loader, ALL_SLOTS, fewshot_loader_dev, fewshot_loader_test = prepare_data(
-        args, task.tokenizer)
+    test_loader, ALL_SLOTS = prepare_testdata(
+        args, tokenizer)
 
     #save model path
     save_path = os.path.join(args["saving_dir"], "t5-small")
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-
-    trainer = Trainer(
-        default_root_dir=save_path,
-        accumulate_grad_batches=args["gradient_accumulation_steps"],
-        gradient_clip_val=args["max_norm"],
-        max_epochs=args["n_epochs"],
-        callbacks=[pl.callbacks.EarlyStopping(
-            monitor='val_loss', min_delta=0.00, patience=5, verbose=False, mode='min')],
-        gpus=args["GPU"],
-        deterministic=True,
-        num_nodes=1,
-        #precision=16,
-        accelerator="ddp"
-    )
-
-    trainer.fit(task, train_loader, val_loader)
-
-    task.model.save_pretrained(save_path)
-    task.tokenizer.save_pretrained(save_path)
+    task.model.from_pretrained(save_path)
+    task.tokenizer.from_pretrained(save_path)
 
     print("test start...")
     #evaluate model
-    _ = evaluate_model(args, task.tokenizer, task.model,
-                       test_loader, save_path, ALL_SLOTS)
-
-
-def evaluate_model(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="zeroshot"):
-    save_path = os.path.join(save_path, "results")
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-    predictions = {}
-    # to gpu
-    # gpu = args["GPU"][0]
-    device = torch.device("cuda:0")
-    model.to(device)
-    model.eval()
-
-    slot_logger = {slot_name: [0, 0, 0] for slot_name in ALL_SLOTS}
-
-    for batch in tqdm(test_loader):
-        dst_outputs = model.generate(input_ids=batch["encoder_input"].to(device),
-                                     attention_mask=batch["attention_mask"].to(
-                                         device),
-                                     eos_token_id=tokenizer.eos_token_id,
-                                     max_length=200,
-                                     )
-
-        value_batch = tokenizer.batch_decode(
-            dst_outputs, skip_special_tokens=True)
-
-        for idx, value in enumerate(value_batch):
-            dial_id = batch["ID"][idx]
-            if dial_id not in predictions:
-                predictions[dial_id] = {}
-                predictions[dial_id]["domain"] = batch["domains"][idx][0]
-                predictions[dial_id]["turns"] = {}
-            if batch["turn_id"][idx] not in predictions[dial_id]["turns"]:
-                predictions[dial_id]["turns"][batch["turn_id"][idx]] = {
-                    "turn_belief": batch["turn_belief"][idx], "pred_belief": []}
-
-            if value != "none":
-                predictions[dial_id]["turns"][batch["turn_id"][idx]]["pred_belief"].append(
-                    str(batch["slot_text"][idx])+'-'+str(value))
-
-            # analyze slot acc:
-            if str(value) == str(batch["value_text"][idx]):
-                slot_logger[str(batch["slot_text"][idx])][1] += 1  # hit
-            slot_logger[str(batch["slot_text"][idx])][0] += 1  # total
-
-    for slot_log in slot_logger.values():
-        slot_log[2] = slot_log[1]/slot_log[0]
-
-    with open(os.path.join(save_path, f"{prefix}_slot_acc.json"), 'w') as f:
-        json.dump(slot_logger, f, indent=4)
-
-    with open(os.path.join(save_path, f"{prefix}_prediction.json"), 'w') as f:
-        json.dump(predictions, f, indent=4)
-
-    joint_acc_score, F1_score, turn_acc_score = evaluate_metrics(
-        predictions, ALL_SLOTS)
-
-    evaluation_metrics = {"Joint Acc": joint_acc_score,
-                          "Turn Acc": turn_acc_score, "Joint F1": F1_score}
-    print(f"{prefix} result:", evaluation_metrics)
-
-    with open(os.path.join(save_path, f"{prefix}_result.json"), 'w') as f:
-        json.dump(evaluation_metrics, f, indent=4)
-
-    return predictions
+    _ = predict(args, task.tokenizer, task.model,
+                test_loader, save_path, ALL_SLOTS)
 
 
 if __name__ == "__main__":
     args = get_args()
-    if args.mode == "train":
-        train(args)
+    if args.mode == "test":
+        test(args)

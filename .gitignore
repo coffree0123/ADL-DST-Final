@@ -3,3 +3,4 @@ data
 test.py
 save
 __pycache__
+nohup*

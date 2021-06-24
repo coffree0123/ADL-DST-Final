@@ -1,70 +1,1036 @@
 {
-    "hotel-pricerange": {
-        "description_human": "price budget of the hotel",
+    "account-type": {
+        "description_human": "The user's account type",
         "values": [
-            "cheap",
-            "dontcare",
-            "expensive",
-            "moderate"
-        ],
-        "naive": "price range of the hotel",
-        "question": "What is the pricerange of the hotel that the user in interested in?",
-        "slottype": "price range of the hotel"
+            "checking",
+            "savings"
+        ]
     },
-    "hotel-type": {
-        "description_human": "what is the type of the hotel",
+    "recipient-account-type": {
+        "description_human": "The account type of the recipient to transfer the money to",
         "values": [
-            "guesthouse",
-            "hotel"
-        ],
-        "naive": "type of the hotel",
-        "question": "What is the type of the hotel that the user in interested in?",
-        "slottype": "type of the hotel"
+            "checking",
+            "savings"
+        ]
     },
-    "hotel-parking": {
-        "description_human": "whether the hotel has parking",
+    "balance": {
+        "description_human": "The amount of money held in a bank account at a given time",
+        "values": []
+    },
+    "amount": {
+        "description_human": "The amount of money to send or request",
+        "values": []
+    },
+    "recipient-account-name": {
+        "description_human": "The account name of the recipient who is to receive the transfered money",
+        "values": []
+    },
+    "from-location": {
+        "description_human": "City where bus is leaving from",
+        "values": []
+    },
+    "to-location": {
+        "description_human": "City where bus is going to",
+        "values": []
+    },
+    "from-station": {
+        "description_human": "Name of station at starting city",
+        "values": []
+    },
+    "to-station": {
+        "description_human": "Name of station at ending city",
+        "values": []
+    },
+    "leaving-date": {
+        "description_human": "Date of bus leaving for journey",
+        "values": []
+    },
+    "leaving-time": {
+        "description_human": "Time of bus leaving for journey",
+        "values": []
+    },
+    "fare": {
+        "description_human": "Ticket fare for each passenger",
+        "values": []
+    },
+    "travelers": {
+        "description_human": "Number of travelers for journey",
         "values": [
-            "dontcare",
-            "free",
-            "no",
-            "yes"
-        ],
-        "naive": "parking of the hotel",
-        "question": "What is the parking of the hotel that the user in interested in?",
-        "slottype": "whether have parking in the hotel"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
     },
-    "hotel-book stay": {
-        "description_human": "length of stay at the hotel",
+    "transfers": {
+        "description_human": "Number of transfers in journey",
+        "values": [
+            "0",
+            "1"
+        ]
+    },
+    "origin": {
+        "description_human": "City of origin for the flight",
+        "values": []
+    },
+    "destination": {
+        "description_human": "Destination address or location for cab",
+        "values": []
+    },
+    "origin-station-name": {
+        "description_human": "Name of the bus terminus at the origin",
+        "values": []
+    },
+    "destination-station-name": {
+        "description_human": "Name of the bus terminus at the destination",
+        "values": []
+    },
+    "departure-date": {
+        "description_human": "Start date of the trip",
+        "values": []
+    },
+    "price": {
+        "description_human": "Sale price or per-month rent of property",
+        "values": []
+    },
+    "departure-time": {
+        "description_human": "The time of departure",
+        "values": []
+    },
+    "group-size": {
+        "description_human": "Size of group for the booking",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "fare-type": {
+        "description_human": "Type of fare for the booking",
+        "values": [
+            "Economy",
+            "Economy extra",
+            "Flexible"
+        ]
+    },
+    "event-date": {
+        "description_human": "Date of event or for checking availability",
+        "values": []
+    },
+    "event-time": {
+        "description_human": "Start time of event",
+        "values": []
+    },
+    "event-location": {
+        "description_human": "Name of event location",
+        "values": []
+    },
+    "event-name": {
+        "description_human": "Name of artist or play",
+        "values": []
+    },
+    "available-start-time": {
+        "description_human": "Starting time of available time slot",
+        "values": []
+    },
+    "available-end-time": {
+        "description_human": "Ending time of available time slot",
+        "values": []
+    },
+    "category": {
+        "description_human": "How many stops the route has",
+        "values": [
+            "direct",
+            "one-stop"
+        ]
+    },
+    "subcategory": {
+        "description_human": "Subcategory of event, either a music genre or sport name",
+        "values": []
+    },
+    "date": {
+        "description_human": "Date of event",
+        "values": []
+    },
+    "time": {
+        "description_human": "Start time of event",
+        "values": []
+    },
+    "number-of-seats": {
+        "description_human": "Number of seats to reserve at the restaurant",
         "values": [
             "1",
             "2",
             "3",
             "4",
             "5",
-            "6",
-            "7",
-            "8"
-        ],
-        "naive": "stay for the hotel booking",
-        "question": "What is the book stay of the hotel that the user in interested in?",
-        "slottype": "number of stay for the hotel booking"
+            "6"
+        ]
     },
-    "hotel-book day": {
+    "city-of-event": {
+        "description_human": "City where event is happening",
+        "values": []
+    },
+    "address-of-location": {
+        "description_human": "Street address of event location",
+        "values": []
+    },
+    "event-type": {
+        "description_human": "Type of cultural event",
+        "values": [
+            "Music",
+            "Theater"
+        ]
+    },
+    "number-of-tickets": {
+        "description_human": "the number of flight tickets for the trip",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "city": {
+        "description_human": "City where you want to rent the car",
+        "values": []
+    },
+    "venue": {
+        "description_human": "Exact venue of event",
+        "values": []
+    },
+    "venue-address": {
+        "description_human": "Street address of event venue",
+        "values": []
+    },
+    "passengers": {
+        "description_human": "Number of passengers to find flight seats for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "seating-class": {
+        "description_human": "The cabin seat option",
+        "values": [
+            "Economy",
+            "Premium Economy",
+            "Business"
+        ]
+    },
+    "origin-city": {
+        "description_human": "City in which the journey originates",
+        "values": []
+    },
+    "destination-city": {
+        "description_human": "City in which the journey ends",
+        "values": []
+    },
+    "origin-airport": {
+        "description_human": "The name of the airport or city to depart from",
+        "values": []
+    },
+    "destination-airport": {
+        "description_human": "The name of the airport or city to arrive at",
+        "values": []
+    },
+    "return-date": {
+        "description_human": "End date of the trip",
+        "values": []
+    },
+    "number-stops": {
+        "description_human": "Number of stops in the itinerary",
+        "values": [
+            "0",
+            "1"
+        ]
+    },
+    "outbound-departure-time": {
+        "description_human": "Departure time of the flight flying to the destination",
+        "values": []
+    },
+    "outbound-arrival-time": {
+        "description_human": "Arrival time of the flight flying to the destination",
+        "values": []
+    },
+    "inbound-arrival-time": {
+        "description_human": "Arrival time of the flight coming back from the trip",
+        "values": []
+    },
+    "inbound-departure-time": {
+        "description_human": "Departure time of the flight coming back from the trip",
+        "values": []
+    },
+    "refundable": {
+        "description_human": "Whether the booking is refundable or not",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "airlines": {
+        "description_human": "The company that provides air transport services",
+        "values": [
+            "United Airlines",
+            "American Airlines",
+            "Delta Airlines",
+            "Southwest Airlines",
+            "Alaska Airlines",
+            "British Airways",
+            "Air Canada",
+            "Air France",
+            "South African Airways",
+            "LOT Polish Airlines",
+            "LATAM Brasil"
+        ]
+    },
+    "is-redeye": {
+        "description_human": "Boolean flag indicating whether the flight is a red-eye flight",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "area": {
+        "description_human": "City where the property is located",
+        "values": []
+    },
+    "address": {
+        "description_human": "Street address of property",
+        "values": []
+    },
+    "property-name": {
+        "description_human": "Name of property or apartment complex",
+        "values": []
+    },
+    "phone-number": {
+        "description_human": "Contact number of property or apartment complex",
+        "values": []
+    },
+    "furnished": {
+        "description_human": "Boolean flag indicating if the property is furnished",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "pets-allowed": {
+        "description_human": "Boolean flag indicating if pets are allowed",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "rent": {
+        "description_human": "Rent per month of the apartment",
+        "values": []
+    },
+    "visit-date": {
+        "description_human": "Date for visit to the property",
+        "values": []
+    },
+    "number-of-beds": {
+        "description_human": "Number of bedrooms in the property",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "number-of-baths": {
+        "description_human": "Number of bathroom in the property",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "number-of-rooms": {
+        "description_human": "Number of rooms to reserve",
+        "values": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "check-in-date": {
+        "description_human": "Check in date for reservation",
+        "values": []
+    },
+    "number-of-days": {
+        "description_human": "Number of days in the reservation",
+        "values": []
+    },
+    "star-rating": {
+        "description_human": "Star rating of the accommodation",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "hotel-name": {
+        "description_human": "name of the hotel",
+        "values": []
+    },
+    "street-address": {
+        "description_human": "Street address of the accommodation",
+        "values": []
+    },
+    "price-per-night": {
+        "description_human": "Price per night for the stay",
+        "values": []
+    },
+    "has-wifi": {
+        "description_human": "Boolean flag indicating if the hotel has wifi",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "where-to": {
+        "description_human": "Location of the house",
+        "values": []
+    },
+    "number-of-adults": {
+        "description_human": "Number of adults to reserve train tickets for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "check-out-date": {
+        "description_human": "End date for the hotel reservation",
+        "values": []
+    },
+    "rating": {
+        "description_human": "Average user rating for restaurant on a scale of 5",
+        "values": []
+    },
+    "total-price": {
+        "description_human": "Total price of rental reservation",
+        "values": []
+    },
+    "has-laundry-service": {
+        "description_human": "Boolean flag indicating if the house has laundry service",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "location": {
+        "description_human": "Location to share with contact",
+        "values": []
+    },
+    "average-rating": {
+        "description_human": "Average review rating of the doctor",
+        "values": []
+    },
+    "pets-welcome": {
+        "description_human": "Boolean flag indicating if pets are allowed in the hotel",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "title": {
+        "description_human": "Title of the movie",
+        "values": []
+    },
+    "genre": {
+        "description_human": "Type of the music",
+        "values": []
+    },
+    "subtitles": {
+        "description_human": "Boolean flag indicating if subtitles are desired for this movie",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "directed-by": {
+        "description_human": "Director of the movie",
+        "values": []
+    },
+    "show-type": {
+        "description_human": "Type of show",
+        "values": [
+            "regular",
+            "3d",
+            "imax"
+        ]
+    },
+    "theater-name": {
+        "description_human": "Name of the theatre",
+        "values": []
+    },
+    "show-time": {
+        "description_human": "Time of the show",
+        "values": []
+    },
+    "show-date": {
+        "description_human": "Date of the show",
+        "values": []
+    },
+    "movie-name": {
+        "description_human": "Name of the movie",
+        "values": []
+    },
+    "song-name": {
+        "description_human": "Name of the song",
+        "values": []
+    },
+    "artist": {
+        "description_human": "Performer's name",
+        "values": []
+    },
+    "album": {
+        "description_human": "Collection of the song",
+        "values": []
+    },
+    "year": {
+        "description_human": "Year when the song was first released",
+        "values": [
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019"
+        ]
+    },
+    "playback-device": {
+        "description_human": "Playback device on which the song is to be played",
+        "values": [
+            "TV",
+            "kitchen speaker",
+            "bedroom speaker"
+        ]
+    },
+    "type": {
+        "description_human": "Type of the therapist",
+        "values": [
+            "Psychologist",
+            "Family Counselor",
+            "Psychiatrist"
+        ]
+    },
+    "car-name": {
+        "description_human": "Car model",
+        "values": []
+    },
+    "pickup-location": {
+        "description_human": "Place to pick up the car",
+        "values": []
+    },
+    "pickup-date": {
+        "description_human": "Date of pickup for car rental",
+        "values": []
+    },
+    "pickup-time": {
+        "description_human": "Time for the pick-up",
+        "values": []
+    },
+    "pickup-city": {
+        "description_human": "City in which to pick up rental car",
+        "values": []
+    },
+    "dropoff-date": {
+        "description_human": "End date of car rental reservation",
+        "values": []
+    },
+    "car-type": {
+        "description_human": "Type of the car",
+        "values": [
+            "Hatchback",
+            "Sedan",
+            "SUV"
+        ]
+    },
+    "restaurant-name": {
+        "description_human": "name of the restaurant",
+        "values": []
+    },
+    "serves-alcohol": {
+        "description_human": "Boolean flag indicating if the restaurant serves alcohol",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "has-live-music": {
+        "description_human": "Boolean flag indicating if the restaurant has live music",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "party-size": {
+        "description_human": "Party size for a reservation",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ]
+    },
+    "price-range": {
+        "description_human": "Price range for the restaurant",
+        "values": [
+            "cheap",
+            "moderate",
+            "pricey",
+            "ultra high-end"
+        ]
+    },
+    "cuisine": {
+        "description_human": "Cuisine of food served in the restaurant",
+        "values": [
+            "Mexican",
+            "Chinese",
+            "Indian",
+            "American",
+            "Italian"
+        ]
+    },
+    "shared-ride": {
+        "description_human": "Boolean flag whether ride is shared with other passengers",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "ride-fare": {
+        "description_human": "Total fare for cab ride",
+        "values": []
+    },
+    "approximate-ride-duration": {
+        "description_human": "Approximate duration of ride to the destination",
+        "values": []
+    },
+    "number-of-riders": {
+        "description_human": "Number of riders to call taxi for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "ride-type": {
+        "description_human": "Type of cab ride",
+        "values": [
+            "Pool",
+            "Regular",
+            "Luxury"
+        ]
+    },
+    "wait-time": {
+        "description_human": "Expected waiting time for pick-up by cab",
+        "values": []
+    },
+    "stylist-name": {
+        "description_human": "Name of the hair stylist/salon",
+        "values": []
+    },
+    "is-unisex": {
+        "description_human": "Boolean flag indicating if the salon is unisex",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "appointment-date": {
+        "description_human": "Date of the appointment",
+        "values": []
+    },
+    "appointment-time": {
+        "description_human": "Time of the appointment",
+        "values": []
+    },
+    "dentist-name": {
+        "description_human": "Name of the dentist",
+        "values": []
+    },
+    "offers-cosmetic-services": {
+        "description_human": "Boolean flag indicating if the dentist offers cosmetic services",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "doctor-name": {
+        "description_human": "Name of the doctor or the medical practice",
+        "values": []
+    },
+    "attraction-name": {
+        "description_human": "name of the attraction",
+        "values": []
+    },
+    "free-entry": {
+        "description_human": "Boolean flag indicating whether entrance to attraction is free",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "good-for-kids": {
+        "description_human": "Boolean flag indicating whether attraction is good for to take kids to",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "precipitation": {
+        "description_human": "The possibility of rain or snow in percentage",
+        "values": []
+    },
+    "humidity": {
+        "description_human": "Percentage humidity",
+        "values": []
+    },
+    "wind": {
+        "description_human": "Wind speed in miles per hour",
+        "values": []
+    },
+    "temperature": {
+        "description_human": "Temperature in Fahrenheit",
+        "values": []
+    },
+    "alarm-time": {
+        "description_human": "Time of the alarm",
+        "values": []
+    },
+    "alarm-name": {
+        "description_human": "Name of the alarm",
+        "values": []
+    },
+    "new-alarm-time": {
+        "description_human": "Time to set for the new alarm",
+        "values": []
+    },
+    "new-alarm-name": {
+        "description_human": "Name to use for the new alarm",
+        "values": []
+    },
+    "account-balance": {
+        "description_human": "The balance in the specified account",
+        "values": []
+    },
+    "transfer-amount": {
+        "description_human": "The amount of money to transfer",
+        "values": []
+    },
+    "recipient-name": {
+        "description_human": "The name of the recipient to transfer the money to",
+        "values": []
+    },
+    "transfer-time": {
+        "description_human": "Number of days for the transfer to go through",
+        "values": []
+    },
+    "flight-class": {
+        "description_human": "Fare class of flight booking",
+        "values": [
+            "Economy",
+            "Premium Economy",
+            "Business",
+            "First Class"
+        ]
+    },
+    "origin-airport-name": {
+        "description_human": "Number of the airport flying out from",
+        "values": []
+    },
+    "destination-airport-name": {
+        "description_human": "Number of the airport flying to",
+        "values": []
+    },
+    "number-checked-bags": {
+        "description_human": "Number of bags to check in",
+        "values": [
+            "0",
+            "1",
+            "2"
+        ]
+    },
+    "arrives-next-day": {
+        "description_human": "Whether the flight arrives the next day",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "stay-length": {
+        "description_human": "Length of stay in days",
+        "values": []
+    },
+    "place-name": {
+        "description_human": "Name of the accommodation",
+        "values": []
+    },
+    "smoking-allowed": {
+        "description_human": "Whether or not smoking is allowed inside the place",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "subtitle-language": {
+        "description_human": "Language of the subtitles",
+        "values": [
+            "English",
+            "Spanish",
+            "Hindi",
+            "French"
+        ]
+    },
+    "director": {
+        "description_human": "Name of director of the movie",
+        "values": []
+    },
+    "actors": {
+        "description_human": "Name of an actor starring in the movie",
+        "values": []
+    },
+    "aggregate-rating": {
+        "description_human": "Aggregate user rating for movie, scale of 10",
+        "values": []
+    },
+    "starring": {
+        "description_human": "Celebs acting in the movie",
+        "values": []
+    },
+    "has-seating-outdoors": {
+        "description_human": "Whether the restaurant has outdoor seating available",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "has-vegetarian-options": {
+        "description_human": "Whether the restaurant has adequate vegetarian options",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "therapist-name": {
+        "description_human": "Name of the therapist",
+        "values": []
+    },
+    "from-city": {
+        "description_human": "The city to depart from",
+        "values": []
+    },
+    "to-city": {
+        "description_human": "The destination city of the trip",
+        "values": []
+    },
+    "additional-luggage": {
+        "description_human": "Whether to carry excess baggage in the bus",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "num-passengers": {
+        "description_human": "The number of tickets for the trip",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "price-per-ticket": {
+        "description_human": "Price of each ticket",
+        "values": []
+    },
+    "is-nonstop": {
+        "description_human": "Whether the flight is a direct one",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "intent": {
+        "description_human": "Whether to buy or rent a property",
+        "values": [
+            "rent",
+            "buy"
+        ]
+    },
+    "has-garage": {
+        "description_human": "Whether the property has a garage",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "in-unit-laundry": {
+        "description_human": "Whether the property has in-unit laundry facilities",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "contact-name": {
+        "description_human": "Name of contact to send to",
+        "values": []
+    },
+    "movie-title": {
+        "description_human": "Name of the movie",
+        "values": []
+    },
+    "percent-rating": {
+        "description_human": "Average critic percentage rating",
+        "values": []
+    },
+    "cast": {
+        "description_human": "Actors in the movie",
+        "values": []
+    },
+    "track": {
+        "description_human": "Name of the song",
+        "values": []
+    },
+    "device": {
+        "description_human": "Place or name of the media player to play the song selected",
+        "values": [
+            "Living room",
+            "Kitchen",
+            "Patio"
+        ]
+    },
+    "payment-method": {
+        "description_human": "The source of money used for making the payment",
+        "values": [
+            "app balance",
+            "debit card",
+            "credit card"
+        ]
+    },
+    "receiver": {
+        "description_human": "Name of the contact or account to make the transaction with",
+        "values": []
+    },
+    "private-visibility": {
+        "description_human": "Whether the transaction is private or not",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "start-date": {
+        "description_human": "The first date to start using the rental car",
+        "values": []
+    },
+    "end-date": {
+        "description_human": "The date to return the car",
+        "values": []
+    },
+    "price-per-day": {
+        "description_human": "The cost for renting the car per day",
+        "values": []
+    },
+    "add-insurance": {
+        "description_human": "Whether to purchase insurance",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "from": {
+        "description_human": "Starting city for train journey",
+        "values": []
+    },
+    "to": {
+        "description_human": "Ending city for train journey",
+        "values": []
+    },
+    "date-of-journey": {
+        "description_human": "Date of train journey",
+        "values": []
+    },
+    "journey-start-time": {
+        "description_human": "Time of start of train journey",
+        "values": []
+    },
+    "total": {
+        "description_human": "Total price of train reservation",
+        "values": []
+    },
+    "class": {
+        "description_human": "Fare class for train reservation",
+        "values": [
+            "Value",
+            "Flexible",
+            "Business"
+        ]
+    },
+    "trip-protection": {
+        "description_human": "Whether to add trip protection to reservation, for a fee",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "hotel-pricerange": {
+        "description_human": "price budget of the hotel",
+        "values": [
+            "expensive",
+            "cheap",
+            "moderate"
+        ]
+    },
+    "hotel-type": {
+        "description_human": "what is the type of the hotel",
+        "values": [
+            "guesthouse",
+            "hotel"
+        ]
+    },
+    "hotel-parking": {
+        "description_human": "whether the hotel has parking",
+        "values": [
+            "free",
+            "no",
+            "yes"
+        ]
+    },
+    "hotel-bookday": {
         "description_human": "day of the hotel booking",
         "values": [
-            "friday",
             "monday",
-            "saturday",
-            "sunday",
-            "thursday",
             "tuesday",
-            "wednesday"
-        ],
-        "naive": "day for the hotel booking",
-        "question": "What is the book day of the hotel that the user in interested in?",
-        "slottype": "day for the hotel booking"
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday"
+        ]
     },
-    "hotel-book people": {
+    "hotel-bookpeople": {
         "description_human": "number of people for the hotel booking",
         "values": [
             "1",
@@ -75,24 +1041,20 @@
             "6",
             "7",
             "8"
-        ],
-        "naive": "people for the hotel booking",
-        "question": "What is the book people of the hotel that the user in interested in?",
-        "slottype": "number of people for the hotel booking"
+        ]
     },
-    "hotel-area": {
-        "description_human": "area or place of the hotel",
+    "hotel-bookstay": {
+        "description_human": "length of stay at the hotel",
         "values": [
-            "centre",
-            "dontcare",
-            "east",
-            "north",
-            "south",
-            "west"
-        ],
-        "naive": "area of the hotel",
-        "question": "What is the area of the hotel that the user in interested in?",
-        "slottype": "area of the hotel"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+        ]
     },
     "hotel-stars": {
         "description_human": "star rating of the hotel",
@@ -102,68 +1064,66 @@
             "2",
             "3",
             "4",
-            "5",
-            "dontcare"
-        ],
-        "naive": "stars of the hotel",
-        "question": "What is the stars of the hotel that the user in interested in?",
-        "slottype": "number of stars of the hotel"
+            "5"
+        ]
     },
     "hotel-internet": {
         "description_human": "whether the hotel has internet",
         "values": [
-            "dontcare",
+            "free",
             "no",
             "yes"
-        ],
-        "naive": "internet of the hotel",
-        "question": "What is the internet of the hotel that the user in interested in?",
-        "slottype": "whether have internet in the hotel"
+        ]
     },
-    "train-destination": {
-        "description_human": "destination of the train",
-        "values": [],
-        "naive": "destination of the train",
-        "question": "What is the destination of the train that the user in interested in?",
-        "slottype": "location of destination of the train"
+    "hotel-area": {
+        "description_human": "area or place of the hotel",
+        "values": [
+            "centre",
+            "east",
+            "north",
+            "south",
+            "west"
+        ]
+    },
+    "train-arriveby": {
+        "description_human": "arrival time of the train",
+        "values": []
+    },
+    "train-departure": {
+        "description_human": "departure location of the train",
+        "values": [
+            "birmingham new street",
+            "bishops stortford",
+            "broxbourne",
+            "cambridge",
+            "ely",
+            "kings lynn",
+            "leicester",
+            "london kings cross",
+            "london liverpool street",
+            "norwich",
+            "peterborough",
+            "stansted airport",
+            "stevenage"
+        ]
     },
     "train-day": {
         "description_human": "day of the train",
         "values": [
-            "dontcare",
-            "friday",
             "monday",
-            "saturday",
-            "sunday",
-            "thursday",
             "tuesday",
-            "wednesday"
-        ],
-        "naive": "day of the train",
-        "question": "What is the day of the train that the user in interested in?",
-        "slottype": "day of the train"
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday"
+        ]
     },
-    "train-departure": {
-        "description_human": "departure location of the train",
-        "values": [],
-        "naive": "departure of the train",
-        "question": "What is the departure of the train that the user in interested in?",
-        "slottype": "location of departure of the train"
-    },
-    "train-arriveby": {
-        "description_human": "arrival time of the train",
-        "values": [],
-        "naive": "arrive by of the train",
-        "question": "What is the arriveby of the train that the user in interested in?",
-        "slottype": "time of arrive by of the train"
-    },
-    "train-book people": {
+    "train-bookpeople": {
         "description_human": "how many train tickets you need",
         "values": [
             "0",
             "1",
-            "10",
-            "15",
             "2",
             "3",
             "4",
@@ -171,52 +1131,67 @@
             "6",
             "7",
             "8",
-            "9"
-        ],
-        "naive": "people for the train booking",
-        "question": "What is the book people of the train that the user in interested in?",
-        "slottype": "number of people for the train booking"
+            "9",
+            "10",
+            "15"
+        ]
     },
     "train-leaveat": {
         "description_human": "leaving time for the train",
-        "values": [],
-        "naive": "leave at of the train",
-        "question": "What is the leaveat of the train that the user in interested in?",
-        "slottype": "time of leave at of the train"
+        "values": []
+    },
+    "train-destination": {
+        "description_human": "destination of the train",
+        "values": [
+            "birmingham new street",
+            "bishops stortford",
+            "broxbourne",
+            "cambridge",
+            "ely",
+            "kings lynn",
+            "leicester",
+            "london kings cross",
+            "london liverpool street",
+            "norwich",
+            "peterborough",
+            "stansted airport",
+            "stevenage"
+        ]
     },
     "attraction-area": {
         "description_human": "area to search for attractions",
         "values": [
-            "cambridge",
             "centre",
-            "dontcare",
             "east",
             "north",
             "south",
             "west"
-        ],
-        "naive": "area of the attraction",
-        "question": "What is the area of the attraction that the user in interested in?",
-        "slottype": "area of the attraction"
+        ]
     },
-    "restaurant-food": {
-        "description_human": "the cuisine of the restaurant you are looking for",
-        "values": [],
-        "naive": "food of the restaurant",
-        "question": "What is the food of the restaurant that the user in interested in?",
-        "slottype": "food of the restaurant"
+    "attraction-type": {
+        "description_human": "type of the attraction",
+        "values": [
+            "architecture",
+            "boat",
+            "cinema",
+            "college",
+            "concerthall",
+            "entertainment",
+            "museum",
+            "multiple sports",
+            "nightclub",
+            "park",
+            "swimmingpool",
+            "theatre"
+        ]
     },
     "restaurant-pricerange": {
         "description_human": "price budget for the restaurant",
         "values": [
             "cheap",
-            "dontcare",
             "expensive",
             "moderate"
-        ],
-        "naive": "price range of the restaurant",
-        "question": "What is the pricerange of the restaurant that the user in interested in?",
-        "slottype": "price range of the restaurant"
+        ]
     },
     "restaurant-area": {
         "description_human": "area or place of the restaurant",
@@ -226,99 +1201,21 @@
             "north",
             "south",
             "west"
-        ],
-        "naive": "area of the restaurant",
-        "question": "What is the area of the restaurant that the user in interested in?",
-        "slottype": "area of the restaurant"
+        ]
     },
-    "attraction-name": {
-        "description_human": "name of the attraction",
-        "values": [],
-        "naive": "name of the attraction",
-        "question": "What is the name of the attraction that the user in interested in?",
-        "slottype": "name of the attraction"
-    },
-    "restaurant-name": {
-        "description_human": "name of the restaurant",
-        "values": [],
-        "naive": "name of the restaurant",
-        "question": "What is the name of the restaurant that the user in interested in?",
-        "slottype": "name of the restaurant"
-    },
-    "attraction-type": {
-        "description_human": "type of the attraction",
-        "values": [
-            "architecture",
-            "boat",
-            "church",
-            "cinema",
-            "college",
-            "concerthall",
-            "entertainment",
-            "hotspot",
-            "multiple sports",
-            "museum",
-            "nightclub",
-            "park",
-            "special",
-            "swimmingpool",
-            "theatre"
-        ],
-        "naive": "type of the attraction",
-        "question": "What is the type of the attraction that the user in interested in?",
-        "slottype": "type of the attraction"
-    },
-    "hotel-name": {
-        "description_human": "name of the hotel",
-        "values": [],
-        "naive": "name of the hotel",
-        "question": "What is the name of the hotel that the user in interested in?",
-        "slottype": "name of the hotel"
-    },
-    "taxi-leaveat": {
-        "description_human": "leaving time of taxi",
-        "values": [],
-        "naive": "leave at of the taxi",
-        "question": "What is the leaveat of the taxi that the user in interested in?",
-        "slottype": "time of leave at of the taxi"
-    },
-    "taxi-destination": {
-        "description_human": "destination of taxi",
-        "values": [],
-        "naive": "destination of the taxi",
-        "question": "What is the destination of the taxi that the user in interested in?",
-        "slottype": "location of destination of the taxi"
-    },
-    "taxi-departure": {
-        "description_human": "departure location of taxi",
-        "values": [],
-        "naive": "departure of the taxi",
-        "question": "What is the departure of the taxi that the user in interested in?",
-        "slottype": "location of departure of the taxi"
-    },
-    "restaurant-book time": {
-        "description_human": "time of the restaurant booking",
-        "values": [],
-        "naive": "time for the restaurant booking",
-        "question": "What is the book time of the restaurant that the user in interested in?",
-        "slottype": "time for the restaurant booking"
-    },
-    "restaurant-book day": {
+    "restaurant-bookday": {
         "description_human": "day of the restaurant booking",
         "values": [
-            "friday",
             "monday",
-            "saturday",
-            "sunday",
-            "thursday",
             "tuesday",
-            "wednesday"
-        ],
-        "naive": "day for the restaurant booking",
-        "question": "What is the book day of the restaurant that the user in interested in?",
-        "slottype": "day for the restaurant booking"
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday"
+        ]
     },
-    "restaurant-book people": {
+    "restaurant-bookpeople": {
         "description_human": "how many people for the restaurant reservation",
         "values": [
             "1",
@@ -329,16 +1226,57 @@
             "6",
             "7",
             "8"
-        ],
-        "naive": "people for the restaurant booking",
-        "question": "What is the book people of the restaurant that the user in interested in?",
-        "slottype": "number of people for the restaurant booking"
+        ]
+    },
+    "restaurant-booktime": {
+        "description_human": "time of the restaurant booking",
+        "values": []
+    },
+    "hospital-department": {
+        "description_human": "type of medical care",
+        "values": []
+    },
+    "taxi-leaveat": {
+        "description_human": "leaving time of taxi",
+        "values": []
+    },
+    "taxi-destination": {
+        "description_human": "destination of taxi",
+        "values": []
+    },
+    "taxi-departure": {
+        "description_human": "departure location of taxi",
+        "values": []
     },
     "taxi-arriveby": {
         "description_human": "arrival time of taxi",
-        "values": [],
-        "naive": "arrive by of the taxi",
-        "question": "What is the arriveby of the taxi that the user in interested in?",
-        "slottype": "time of arrive by of the taxi"
+        "values": []
+    },
+    "bus-departure": {
+        "description_human": "departure location of bus",
+        "values": [
+            "cambridge"
+        ]
+    },
+    "bus-destination": {
+        "description_human": "destination of bus",
+        "values": [
+            "london kings cross",
+            "bishops stortford",
+            "cambridge",
+            "kohinoor"
+        ]
+    },
+    "bus-day": {
+        "description_human": "day to use the bus tickets",
+        "values": [
+            "wednesday"
+        ]
+    },
+    "police-name": {
+        "description_human": "name of the police station",
+        "values": [
+            "parkside police station"
+        ]
     }
 }

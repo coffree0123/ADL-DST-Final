@@ -218,7 +218,7 @@ def collate_fn(data, tokenizer):
 def prepare_data(args, tokenizer):
     path_train = 'data/train_dials.json'
     path_dev = 'data/dev_dials.json'
-    path_test = 'data/test_dials.json'
+    path_test = 'data/test_seen_dials.json'
 
     ontology = json.load(open("data/ontology.json", 'r'))
     ALL_SLOTS = get_slot_information(ontology)
@@ -244,3 +244,21 @@ def prepare_data(args, tokenizer):
     fewshot_loader_dev=None
     fewshot_loader_test=None
     return train_loader, dev_loader, test_loader, ALL_SLOTS, fewshot_loader_dev, fewshot_loader_test
+
+
+def prepare_testdata(args, tokenizer):
+    path_test = args["test_file"]
+
+    ontology = json.load(open("data/ontology.json", 'r'))
+    ALL_SLOTS = get_slot_information(ontology)
+    description = json.load(open("utils/slot_description.json", 'r'))
+
+    data_test, ALL_SLOTS = read_data(
+        args, path_test, ALL_SLOTS, tokenizer, description, "test")
+
+    test_dataset = DSTDataset(data_test, args)
+
+    test_loader = DataLoader(test_dataset, batch_size=args["test_batch_size"], shuffle=False, collate_fn=partial(
+        collate_fn, tokenizer=tokenizer), num_workers=16)
+
+    return test_loader, ALL_SLOTS

@@ -17,29 +17,26 @@ def dump_json(obj, file):
         json.dump(obj, f, indent=4)
 
 
-def turns2dialogue(user_turn: dict, sys_turn: dict, belief_state: dict) -> dict:
+def create_slot(slots):
+    return_slot = {}
+    for slot_name in slots.keys():
+        return_slot[slot_name] = slots[slot_name][0]
+    return return_slot
+
+
+def turns2dialogue(user_turn: dict, sys_turn: dict) -> dict:
     assert user_turn['speaker'] == 'USER' and (
         not sys_turn or sys_turn['speaker'] == 'SYSTEM')
 
     frame = user_turn['frames'][0]  # only consider frame_0
-    service_name = frame['service']
-
-    for action in frame['actions']:
-        act = action['act']
-        if act != 'INFORM':
-            continue
-        slot = action["slot"]
-        slot = slot.replace('_', '-')
-        value = action["values"][0]
-        cur_state = {slot: value}
-        belief_state["slot_values"].update(cur_state)
 
     dialogue = {}
     dialogue['system'] = sys_turn['utterance'] if sys_turn else "none"
     dialogue['user'] = user_turn['utterance']
-    dialogue['state'] = deepcopy(belief_state)
+    dialogue['state'] = {"active_intent": "none",
+                         "slot_values": create_slot(frame["state"]["slot_values"])}
 
-    return dialogue, belief_state
+    return dialogue
 
 
 def convert_one_entity(ent: dict, ontology: dict, is_test=False) -> dict:
@@ -68,22 +65,12 @@ def convert_one_entity(ent: dict, ontology: dict, is_test=False) -> dict:
             if idx % 2 == 0:
                 user_turn = turn
                 try:
-                    dialogue, belief_state = turns2dialogue(
-                        user_turn, sys_turn, belief_state)
+                    dialogue = turns2dialogue(user_turn, sys_turn)
                     res['turns'].append(dialogue)
                 except:
                     pass
             else:
                 sys_turn = turn
-
-    # Collect ontology.
-    if (not is_test):
-        for ss, vv in belief_state["slot_values"].items():
-            ss = ss.replace('_', '-')
-            if ss not in ontology:
-                ontology[ss] = []
-            if vv not in ontology[ss]:
-                ontology[ss].append(vv)
 
     return res
 
@@ -107,20 +94,16 @@ def create_ontology(schema_path, ontology):
         slots = service["slots"]
         for slot in slots:
             if (slot.get("possible_values", -1) == -1):
+                print(slot["name"])
                 continue
-            # Create slot_description.json
+
             slot_name = slot["name"].replace('_', '-')
-            cur_slot = {
+            # Create slot_description.json
+            return_des[slot_name] = {
                 "description_human": slot["description"], "values": slot["possible_values"]}
-            data_slot = ontology.get(slot_name, -1)
-            if (data_slot != -1):
-                cur_slot["values"] += data_slot
-            return_des[slot_name] = cur_slot
 
             # Create new ontology
             return_onto[slot_name] = slot["possible_values"]
-            if (data_slot != -1):
-                return_onto[slot_name] += data_slot
 
     return return_des, return_onto, domains
 
