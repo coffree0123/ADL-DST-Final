@@ -20,7 +20,7 @@ def dump_json(obj, file):
 def create_slot(slots):
     return_slot = {}
     for slot_name in slots.keys():
-        return_slot[slot_name] = slots[slot_name][0]
+        return_slot[slot_name.replace("_", "-")] = slots[slot_name][0]
     return return_slot
 
 
