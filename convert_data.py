@@ -105,7 +105,7 @@ def create_ontology(schema_path):
 
         for slot in slots:
             slot_name = (service_name + "-" + slot["name"]).lower()
-            slot_value = list(set(slot.get("possible_values", []) + ontology.get(slot_name, [])))
+            slot_value = slot.get("possible_values", [])
 
             # Create slot_description.json
             return_des[slot_name] = {
