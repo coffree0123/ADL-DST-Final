@@ -128,7 +128,7 @@ def predict(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="z
 
                 if value != "none":
                     predictions[dial_id]["turns"][batch["turn_id"][idx]]["pred_belief"].append(
-                        str(batch["slot_text"][idx])+'-'+str(value))
+                        str(batch["slot_text"][idx])+'#####'+str(value))
 
     with open(os.path.join(save_path, f"prediction.json"), 'w') as f:
         json.dump(predictions, f, indent=4)
@@ -164,8 +164,8 @@ def test(args, *more):
 
     #save model path
     save_path = os.path.join(args["saving_dir"], "t5-small")
-    task.model.from_pretrained(save_path)
-    task.tokenizer.from_pretrained(save_path)
+    task.model = T5ForConditionalGeneration.from_pretrained(save_path)
+    task.tokenizer = T5Tokenizer.from_pretrained(save_path)
 
     print("test start...")
     #evaluate model

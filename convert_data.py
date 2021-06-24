@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from tqdm.auto import tqdm
 from copy import deepcopy
 
+ontology = {}
 
 def load_json(file):
     with open(file) as f:
@@ -18,9 +19,18 @@ def dump_json(obj, file):
 
 
 def create_slot(slots):
+    global ontology
     return_slot = {}
+    domain = slots["service"]
+    slots = slots["state"]["slot_values"]
     for slot_name in slots.keys():
-        return_slot[slot_name.replace("_", "-")] = slots[slot_name][0]
+        slot_value = slots[slot_name][0]
+        slot_name = (domain + "-" + slot_name).lower()
+        return_slot[slot_name] = slot_value
+        if (slot_name not in ontology):
+            ontology[slot_name] = []
+        ontology[slot_name].append(slot_value)
+        
     return return_slot
 
 
@@ -34,7 +44,7 @@ def turns2dialogue(user_turn: dict, sys_turn: dict) -> dict:
     dialogue['system'] = sys_turn['utterance'] if sys_turn else "none"
     dialogue['user'] = user_turn['utterance']
     dialogue['state'] = {"active_intent": "none",
-                         "slot_values": create_slot(frame["state"]["slot_values"])}
+                         "slot_values": create_slot(frame)}
 
     return dialogue
 
@@ -46,7 +56,7 @@ def convert_one_entity(ent: dict, ontology: dict, is_test=False) -> dict:
     # dialogue_id -> dialogue_idx
     res['dial_id'] = ent['dialogue_id']
     # services -> domains
-    res['domains'] = [service.replace("_", "-") for service in ent['services']]
+    res['domains'] = [service for service in ent['services']]
     # turns -> dialogue
     res['turns'] = []
     sys_turn = None
@@ -86,24 +96,23 @@ def create_ontology(schema_path, ontology):
     schema = load_json(schema_path)
     for service in schema:
 
-        service_name = service["service_name"].replace("_", "-")
+        slots = service["slots"]
+        service_name = service["service_name"].lower()
+
         if (service_name not in domains):
             domains[service_name] = 0
         domains[service_name] += 1
 
-        slots = service["slots"]
         for slot in slots:
-            if (slot.get("possible_values", -1) == -1):
-                print(slot["name"])
-                continue
+            slot_name = (service_name + "-" + slot["name"]).lower()
+            slot_value = list(set(slot.get("possible_values", []) + ontology.get(slot_name, [])))
 
-            slot_name = slot["name"].replace('_', '-')
             # Create slot_description.json
             return_des[slot_name] = {
-                "description_human": slot["description"], "values": slot["possible_values"]}
+                "description_human": slot["description"], "values": slot_value}
 
             # Create new ontology
-            return_onto[slot_name] = slot["possible_values"]
+            return_onto[slot_name] = slot_value
 
     return return_des, return_onto, domains
 
