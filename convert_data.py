@@ -56,7 +56,7 @@ def convert_one_entity(ent: dict, ontology: dict, is_test=False) -> dict:
     # dialogue_id -> dialogue_idx
     res['dial_id'] = ent['dialogue_id']
     # services -> domains
-    res['domains'] = [service for service in ent['services']]
+    res['domains'] = [service.lower() for service in ent['services']]
     # turns -> dialogue
     res['turns'] = []
     sys_turn = None
@@ -90,7 +90,7 @@ def convert(data: list, ontology: dict, is_test=False) -> list:
     return res
 
 
-def create_ontology(schema_path, ontology):
+def create_ontology(schema_path):
     domains = {}
     return_des, return_onto = {}, {}
     schema = load_json(schema_path)
@@ -198,7 +198,7 @@ def main(args):
 
     schema_path = os.path.join(src_dir, "schema.json")
 
-    schema, ontology, domains = create_ontology(schema_path, ontology)
+    schema, ontology, domains = create_ontology(schema_path)
 
     dump_json(ontology, os.path.join(output_dir, "ontology.json"))
 

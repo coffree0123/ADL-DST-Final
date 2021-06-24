@@ -10,8 +10,7 @@ import random
 from functools import partial
 from utils.fix_label import fix_general_label_error
 from collections import OrderedDict
-EXPERIMENT_DOMAINS = ['Banks-1', 'Buses-1', 'Buses-2', 'Calendar-1', 'Events-1', 'Events-2', 'Flights-1', 'Flights-2', 'Homes-1', 'Hotels-1', 'Hotels-2', 'Hotels-3', 'Media-1', 'Movies-1', 'Music-1', 'Music-2', 'RentalCars-1', 'RentalCars-2', 'Restaurants-1', 'RideSharing-1', 'RideSharing-2', 'Services-1', 'Services-2', 'Services-3',
-                      'Travel-1', 'Weather-1', 'Alarm-1', 'Banks-2', 'Flights-3', 'Hotels-4', 'Media-2', 'Movies-2', 'Restaurants-2', 'Services-4', 'Buses-3', 'Events-3', 'Flights-4', 'Homes-2', 'Media-3', 'Messaging-1', 'Movies-3', 'Music-3', 'Payment-1', 'RentalCars-3', 'Trains-1', 'hotel', 'train', 'attraction', 'restaurant', 'hospital', 'taxi', 'bus', 'police']
+EXPERIMENT_DOMAINS = ['banks_1', 'buses_1', 'buses_2', 'calendar_1', 'events_1', 'events_2', 'flights_1', 'flights_2', 'homes_1', 'hotels_1', 'hotels_2', 'hotels_3', 'media_1', 'movies_1', 'music_1', 'music_2', 'rentalcars_1', 'rentalcars_2', 'restaurants_1', 'ridesharing_1', 'ridesharing_2', 'services_1', 'services_2', 'services_3', 'travel_1', 'weather_1', 'alarm_1', 'banks_2', 'flights_3', 'hotels_4', 'media_2', 'movies_2', 'restaurants_2', 'services_4', 'buses_3', 'events_3', 'flights_4', 'homes_2', 'media_3', 'messaging_1', 'movies_3', 'music_3', 'payment_1', 'rentalcars_3', 'trains_1', 'hotel', 'train', 'attraction', 'restaurant', 'hospital', 'taxi', 'bus', 'police']
 
 
 random.seed(577)
@@ -79,6 +78,7 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
                     slot_values = fix_general_label_error(turn["state"]["slot_values"],SLOTS)
                 else:
                     slot_values = turn["state"]["slot_values"]
+
                 # input: dialogue history + slot
                 # output: value
 
@@ -99,7 +99,6 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
                         slot_temp = [k for k in SLOTS if args["only_domain"] in k]
                         slot_values = OrderedDict([(k, v) for k, v in slot_values.items() if args["only_domain"] in k])
 
-
                 turn_belief_list = [str(k)+'-'+str(v) for k,v in slot_values.items()]
 
                 # baseline gpt have different preprocessing, e.g., output: (slot1-value1, slot2-value2, slot3-value3, ...)
@@ -108,7 +107,7 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
                     turn_slot_values = []
                     if len(dialog_history.split())>800:
                         continue
-                    for slot in slot_temp:
+                    for slot in slot_temp: 
                         # skip unrelevant slots for out of domain setting
                         if args["except_domain"] != "none" and dataset !="test":
                             if slot.split("-")[0] not in dial_dict["domains"]:
@@ -133,7 +132,6 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
 
                 else:
                     for slot in slot_temp:
-
                         # skip unrelevant slots for out of domain setting
                         if args["except_domain"] != "none" and dataset !="test":
                             if slot.split("-")[0] not in dial_dict["domains"]:
@@ -174,9 +172,10 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
                             "value_list":description[slot]["values"]
                             }
                         data.append(data_detail)
+
     # print(len(data))
-    for idx in range(10):
-        print(data[idx])
+    # for idx in range(len(data)):
+    #     print(data[idx]["output_text"])
     print("domain_counter", domain_counter)
     return data, slot_temp
 
