@@ -6,6 +6,7 @@ from tqdm.auto import tqdm
 from copy import deepcopy
 
 ontology = {}
+max_len = 0
 
 def load_json(file):
     with open(file) as f:
@@ -19,6 +20,7 @@ def dump_json(obj, file):
 
 
 def create_slot(frame):
+    global max_len
     return_slot = {}
     domain = frame["service"]
     slots = frame["state"]["slot_values"]
@@ -26,6 +28,7 @@ def create_slot(frame):
         slot_value = slots[slot_name][0]
         slot_name = (domain + "-" + slot_name).lower()
         return_slot[slot_name] = slot_value
+        max_len = max(max_len, len(slot_value))
         
     return return_slot
 
@@ -202,6 +205,7 @@ def main(args):
               "utils", "slot_description.json"))
 
     print(domains.keys())
+    print("Maximum length of slot: ", max_len)
 
 
 if __name__ == '__main__':

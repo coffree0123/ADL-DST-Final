@@ -162,7 +162,7 @@ def evaluate_model(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, pr
                                      attention_mask=batch["attention_mask"].to(
                                          device),
                                      eos_token_id=tokenizer.eos_token_id,
-                                     max_length=200,
+                                     max_length=100,
                                      )
 
         value_batch = tokenizer.batch_decode(
@@ -187,11 +187,11 @@ def evaluate_model(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, pr
                 slot_logger[str(batch["slot_text"][idx])][1] += 1  # hit
             slot_logger[str(batch["slot_text"][idx])][0] += 1  # total
 
-    for slot_log in slot_logger.values():
-        slot_log[2] = slot_log[1]/slot_log[0]
+    # for slot_log in slot_logger.values():
+    #     slot_log[2] = slot_log[1]/slot_log[0]
 
-    with open(os.path.join(save_path, f"{prefix}_slot_acc.json"), 'w') as f:
-        json.dump(slot_logger, f, indent=4)
+    # with open(os.path.join(save_path, f"{prefix}_slot_acc.json"), 'w') as f:
+    #     json.dump(slot_logger, f, indent=4)
 
     with open(os.path.join(save_path, f"{prefix}_prediction.json"), 'w') as f:
         json.dump(predictions, f, indent=4)

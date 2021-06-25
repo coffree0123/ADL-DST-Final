@@ -132,6 +132,13 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
 
                 else:
                     for slot in slot_temp:
+                        cur_domain = slot.split("-")[0]
+                        if cur_domain not in dial_dict["domains"]:
+                            continue
+                        # if (dataset != "test"):
+                        #     print(slot_values.get(slot, 'none').strip() + f" {tokenizer.eos_token}")
+                        
+                        # print(slot_values.get(slot, 'none').strip() + f" {tokenizer.eos_token}")
                         # skip unrelevant slots for out of domain setting
                         if args["except_domain"] != "none" and dataset !="test":
                             if slot.split("-")[0] not in dial_dict["domains"]:
