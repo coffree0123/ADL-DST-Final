@@ -100,11 +100,7 @@ def predict(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="z
     model.eval()
 
     with torch.no_grad():
-        count = 0
         for batch in tqdm(test_loader):
-            count += 1
-            if (count == 5):
-                break
 
             dst_outputs = model.generate(input_ids=batch["encoder_input"].to(device),
                                          attention_mask=batch["attention_mask"].to(
