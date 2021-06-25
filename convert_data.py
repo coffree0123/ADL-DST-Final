@@ -18,18 +18,14 @@ def dump_json(obj, file):
         json.dump(obj, f, indent=4)
 
 
-def create_slot(slots):
-    global ontology
+def create_slot(frame):
     return_slot = {}
-    domain = slots["service"]
-    slots = slots["state"]["slot_values"]
+    domain = frame["service"]
+    slots = frame["state"]["slot_values"]
     for slot_name in slots.keys():
         slot_value = slots[slot_name][0]
         slot_name = (domain + "-" + slot_name).lower()
         return_slot[slot_name] = slot_value
-        if (slot_name not in ontology):
-            ontology[slot_name] = []
-        ontology[slot_name].append(slot_value)
         
     return return_slot
 

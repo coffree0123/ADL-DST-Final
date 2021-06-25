@@ -1,59 +1,59 @@
 {
-    "account-type": {
-        "description_human": "The user's account type",
+    "banks_1-account_type": {
+        "description_human": "The account type of the user",
         "values": [
             "checking",
             "savings"
         ]
     },
-    "recipient-account-type": {
-        "description_human": "The account type of the recipient to transfer the money to",
+    "banks_1-recipient_account_type": {
+        "description_human": "The account type of the recipient whom the user is transfering money to",
         "values": [
             "checking",
             "savings"
         ]
     },
-    "balance": {
+    "banks_1-balance": {
         "description_human": "The amount of money held in a bank account at a given time",
         "values": []
     },
-    "amount": {
-        "description_human": "The amount of money to send or request",
+    "banks_1-amount": {
+        "description_human": "The amount of money to transfer",
         "values": []
     },
-    "recipient-account-name": {
+    "banks_1-recipient_account_name": {
         "description_human": "The account name of the recipient who is to receive the transfered money",
         "values": []
     },
-    "from-location": {
+    "buses_1-from_location": {
         "description_human": "City where bus is leaving from",
         "values": []
     },
-    "to-location": {
+    "buses_1-to_location": {
         "description_human": "City where bus is going to",
         "values": []
     },
-    "from-station": {
-        "description_human": "Name of station at starting city",
+    "buses_1-from_station": {
+        "description_human": "Station where bus is leaving from",
         "values": []
     },
-    "to-station": {
-        "description_human": "Name of station at ending city",
+    "buses_1-to_station": {
+        "description_human": "Station where bus is going to",
         "values": []
     },
-    "leaving-date": {
+    "buses_1-leaving_date": {
         "description_human": "Date of bus leaving for journey",
         "values": []
     },
-    "leaving-time": {
+    "buses_1-leaving_time": {
         "description_human": "Time of bus leaving for journey",
         "values": []
     },
-    "fare": {
-        "description_human": "Ticket fare for each passenger",
+    "buses_1-fare": {
+        "description_human": "Fare per ticket for journey",
         "values": []
     },
-    "travelers": {
+    "buses_1-travelers": {
         "description_human": "Number of travelers for journey",
         "values": [
             "1",
@@ -63,42 +63,42 @@
             "5"
         ]
     },
-    "transfers": {
+    "buses_1-transfers": {
         "description_human": "Number of transfers in journey",
         "values": [
             "0",
             "1"
         ]
     },
-    "origin": {
-        "description_human": "City of origin for the flight",
+    "buses_2-origin": {
+        "description_human": "Origin city for journey",
         "values": []
     },
-    "destination": {
-        "description_human": "Destination address or location for cab",
+    "buses_2-destination": {
+        "description_human": "Destination city for journey",
         "values": []
     },
-    "origin-station-name": {
+    "buses_2-origin_station_name": {
         "description_human": "Name of the bus terminus at the origin",
         "values": []
     },
-    "destination-station-name": {
+    "buses_2-destination_station_name": {
         "description_human": "Name of the bus terminus at the destination",
         "values": []
     },
-    "departure-date": {
-        "description_human": "Start date of the trip",
+    "buses_2-departure_date": {
+        "description_human": "Date of bus departure",
         "values": []
     },
-    "price": {
-        "description_human": "Sale price or per-month rent of property",
+    "buses_2-price": {
+        "description_human": "Price per ticket of the itinerary",
         "values": []
     },
-    "departure-time": {
-        "description_human": "The time of departure",
+    "buses_2-departure_time": {
+        "description_human": "Time of bus departure",
         "values": []
     },
-    "group-size": {
+    "buses_2-group_size": {
         "description_human": "Size of group for the booking",
         "values": [
             "1",
@@ -108,7 +108,7 @@
             "5"
         ]
     },
-    "fare-type": {
+    "buses_2-fare_type": {
         "description_human": "Type of fare for the booking",
         "values": [
             "Economy",
@@ -116,50 +116,1293 @@
             "Flexible"
         ]
     },
-    "event-date": {
+    "calendar_1-event_date": {
         "description_human": "Date of event or for checking availability",
         "values": []
     },
-    "event-time": {
+    "calendar_1-event_time": {
         "description_human": "Start time of event",
         "values": []
     },
-    "event-location": {
-        "description_human": "Name of event location",
+    "calendar_1-event_location": {
+        "description_human": "Location of event",
         "values": []
     },
-    "event-name": {
-        "description_human": "Name of artist or play",
+    "calendar_1-event_name": {
+        "description_human": "Title of event",
         "values": []
     },
-    "available-start-time": {
+    "calendar_1-available_start_time": {
         "description_human": "Starting time of available time slot",
         "values": []
     },
-    "available-end-time": {
+    "calendar_1-available_end_time": {
         "description_human": "Ending time of available time slot",
         "values": []
     },
-    "category": {
-        "description_human": "How many stops the route has",
+    "events_1-category": {
+        "description_human": "Type of event",
         "values": [
-            "direct",
-            "one-stop"
+            "Music",
+            "Sports"
         ]
     },
-    "subcategory": {
+    "events_1-subcategory": {
         "description_human": "Subcategory of event, either a music genre or sport name",
         "values": []
     },
-    "date": {
+    "events_1-event_name": {
+        "description_human": "Name of event",
+        "values": []
+    },
+    "events_1-date": {
+        "description_human": "Date of occurrence of event",
+        "values": []
+    },
+    "events_1-time": {
+        "description_human": "Time when the event is scheduled to start",
+        "values": []
+    },
+    "events_1-number_of_seats": {
+        "description_human": "Number of seats to find event tickets for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+    "events_1-city_of_event": {
+        "description_human": "City where event is happening",
+        "values": []
+    },
+    "events_1-event_location": {
+        "description_human": "Name of event location",
+        "values": []
+    },
+    "events_1-address_of_location": {
+        "description_human": "Street address of event location",
+        "values": []
+    },
+    "events_2-event_type": {
+        "description_human": "Type of event",
+        "values": [
+            "Music",
+            "Sports"
+        ]
+    },
+    "events_2-category": {
+        "description_human": "The sport or music subcategory",
+        "values": []
+    },
+    "events_2-event_name": {
+        "description_human": "Name of match or artist for event",
+        "values": []
+    },
+    "events_2-date": {
         "description_human": "Date of event",
         "values": []
     },
-    "time": {
-        "description_human": "Start time of event",
+    "events_2-time": {
+        "description_human": "Starting time for event",
         "values": []
     },
-    "number-of-seats": {
+    "events_2-number_of_tickets": {
+        "description_human": "Number of tickets to buy for event",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+    "events_2-city": {
+        "description_human": "City where the event is taking place",
+        "values": []
+    },
+    "events_2-venue": {
+        "description_human": "Exact venue of event",
+        "values": []
+    },
+    "events_2-venue_address": {
+        "description_human": "Address of event venue",
+        "values": []
+    },
+    "flights_1-passengers": {
+        "description_human": "Number of passengers in the booking",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "flights_1-seating_class": {
+        "description_human": "Seating class for the booking",
+        "values": [
+            "Economy",
+            "Premium Economy",
+            "Business",
+            "First Class"
+        ]
+    },
+    "flights_1-origin_city": {
+        "description_human": "Starting city for the trip",
+        "values": []
+    },
+    "flights_1-destination_city": {
+        "description_human": "Ending city for the trip",
+        "values": []
+    },
+    "flights_1-origin_airport": {
+        "description_human": "Airport at the starting city for the trip",
+        "values": []
+    },
+    "flights_1-destination_airport": {
+        "description_human": "Airport at the ending city for the trip",
+        "values": []
+    },
+    "flights_1-departure_date": {
+        "description_human": "Start date for the trip",
+        "values": []
+    },
+    "flights_1-return_date": {
+        "description_human": "Date of the return flight",
+        "values": []
+    },
+    "flights_1-number_stops": {
+        "description_human": "Number of layovers in the flight",
+        "values": [
+            "0",
+            "1"
+        ]
+    },
+    "flights_1-outbound_departure_time": {
+        "description_human": "Departure time for the outbound leg flight",
+        "values": []
+    },
+    "flights_1-outbound_arrival_time": {
+        "description_human": "Arrival time for the outbound leg flight",
+        "values": []
+    },
+    "flights_1-inbound_arrival_time": {
+        "description_human": "Arrival time for the return leg flight",
+        "values": []
+    },
+    "flights_1-inbound_departure_time": {
+        "description_human": "Departure time for the return leg flight",
+        "values": []
+    },
+    "flights_1-price": {
+        "description_human": "Price of the booking per passenger",
+        "values": []
+    },
+    "flights_1-refundable": {
+        "description_human": "Whether the booking is refundable or not",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "flights_1-airlines": {
+        "description_human": "Name of airline",
+        "values": [
+            "United Airlines",
+            "American Airlines",
+            "Delta Airlines",
+            "Southwest Airlines",
+            "Alaska Airlines",
+            "British Airways",
+            "Air Canada",
+            "Air France"
+        ]
+    },
+    "flights_2-passengers": {
+        "description_human": "Number of passengers to book tickets for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "flights_2-seating_class": {
+        "description_human": "Seating class for the flight tickets",
+        "values": [
+            "Economy",
+            "Premium Economy",
+            "Business",
+            "First Class"
+        ]
+    },
+    "flights_2-origin": {
+        "description_human": "City of origin for the flight",
+        "values": []
+    },
+    "flights_2-destination": {
+        "description_human": "City of destination for the flight",
+        "values": []
+    },
+    "flights_2-origin_airport": {
+        "description_human": "Airport where the flight is departing from",
+        "values": []
+    },
+    "flights_2-destination_airport": {
+        "description_human": "Airport where the flight is arriving to",
+        "values": []
+    },
+    "flights_2-departure_date": {
+        "description_human": "Date of departure flight on the ticket",
+        "values": []
+    },
+    "flights_2-return_date": {
+        "description_human": "Date of return flight on the ticket",
+        "values": []
+    },
+    "flights_2-number_stops": {
+        "description_human": "Number of stopovers made by the flight",
+        "values": [
+            "0",
+            "1"
+        ]
+    },
+    "flights_2-outbound_departure_time": {
+        "description_human": "Departure time of the origin-destination flight",
+        "values": []
+    },
+    "flights_2-outbound_arrival_time": {
+        "description_human": "Arrival time of the origin-destination flight",
+        "values": []
+    },
+    "flights_2-inbound_arrival_time": {
+        "description_human": "Arrival time of the destination-origin flight",
+        "values": []
+    },
+    "flights_2-inbound_departure_time": {
+        "description_human": "Departure time of the destination-origin flight",
+        "values": []
+    },
+    "flights_2-fare": {
+        "description_human": "Ticket fare for each passenger",
+        "values": []
+    },
+    "flights_2-is_redeye": {
+        "description_human": "Boolean flag indicating whether the flight is a red-eye flight",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "flights_2-airlines": {
+        "description_human": "Name of the airline to book with",
+        "values": [
+            "United Airlines",
+            "American Airlines",
+            "Delta Airlines",
+            "Southwest Airlines",
+            "Alaska Airlines",
+            "British Airways",
+            "Air Canada",
+            "Air France"
+        ]
+    },
+    "homes_1-area": {
+        "description_human": "City where the apartment is located",
+        "values": []
+    },
+    "homes_1-address": {
+        "description_human": "Address of the apartment",
+        "values": []
+    },
+    "homes_1-property_name": {
+        "description_human": "Name of the apartment",
+        "values": []
+    },
+    "homes_1-phone_number": {
+        "description_human": "Phone number of the apartment",
+        "values": []
+    },
+    "homes_1-furnished": {
+        "description_human": "Boolean flag indicating if the property is furnished",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "homes_1-pets_allowed": {
+        "description_human": "Boolean flag indicating if pets are allowed",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "homes_1-rent": {
+        "description_human": "Rent per month of the apartment",
+        "values": []
+    },
+    "homes_1-visit_date": {
+        "description_human": "Date for the visit to the apartment",
+        "values": []
+    },
+    "homes_1-number_of_beds": {
+        "description_human": "Number of bed rooms",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "homes_1-number_of_baths": {
+        "description_human": "Number of baths in the apartment",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "hotels_1-destination": {
+        "description_human": "Location of the hotel",
+        "values": []
+    },
+    "hotels_1-number_of_rooms": {
+        "description_human": "Number of rooms in the reservation",
+        "values": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "hotels_1-check_in_date": {
+        "description_human": "Start date for the reservation",
+        "values": []
+    },
+    "hotels_1-number_of_days": {
+        "description_human": "Number of days in the reservation",
+        "values": []
+    },
+    "hotels_1-star_rating": {
+        "description_human": "Star rating of the hotel",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "hotels_1-hotel_name": {
+        "description_human": "Name of the hotel",
+        "values": []
+    },
+    "hotels_1-street_address": {
+        "description_human": "Address of the hotel",
+        "values": []
+    },
+    "hotels_1-phone_number": {
+        "description_human": "Phone number of the hotel",
+        "values": []
+    },
+    "hotels_1-price_per_night": {
+        "description_human": "Price per night for the reservation",
+        "values": []
+    },
+    "hotels_1-has_wifi": {
+        "description_human": "Boolean flag indicating if the hotel has wifi",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "hotels_2-where_to": {
+        "description_human": "Location of the house",
+        "values": []
+    },
+    "hotels_2-number_of_adults": {
+        "description_human": "Number of people for the reservation",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "hotels_2-check_in_date": {
+        "description_human": "Start date for the reservation or to find the house",
+        "values": []
+    },
+    "hotels_2-check_out_date": {
+        "description_human": "End date for the reservation or to find the house",
+        "values": []
+    },
+    "hotels_2-rating": {
+        "description_human": "Review rating of the house",
+        "values": []
+    },
+    "hotels_2-address": {
+        "description_human": "Address of the house",
+        "values": []
+    },
+    "hotels_2-phone_number": {
+        "description_human": "Phone number of the house",
+        "values": []
+    },
+    "hotels_2-total_price": {
+        "description_human": "Price per night of the house",
+        "values": []
+    },
+    "hotels_2-has_laundry_service": {
+        "description_human": "Boolean flag indicating if the house has laundry service",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "hotels_3-location": {
+        "description_human": "Location of the hotel",
+        "values": []
+    },
+    "hotels_3-number_of_rooms": {
+        "description_human": "Number of rooms to book",
+        "values": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "hotels_3-check_in_date": {
+        "description_human": "Start date for the hotel reservation",
+        "values": []
+    },
+    "hotels_3-check_out_date": {
+        "description_human": "End date for the hotel reservation",
+        "values": []
+    },
+    "hotels_3-average_rating": {
+        "description_human": "Average review rating for the hotel",
+        "values": []
+    },
+    "hotels_3-hotel_name": {
+        "description_human": "Name of the hotel",
+        "values": []
+    },
+    "hotels_3-street_address": {
+        "description_human": "Address of the hotel",
+        "values": []
+    },
+    "hotels_3-phone_number": {
+        "description_human": "Phone number of the hotel",
+        "values": []
+    },
+    "hotels_3-price": {
+        "description_human": "Total price for the stay",
+        "values": []
+    },
+    "hotels_3-pets_welcome": {
+        "description_human": "Boolean flag indicating if pets are allowed in the hotel",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "media_1-title": {
+        "description_human": "Title of the movie",
+        "values": []
+    },
+    "media_1-genre": {
+        "description_human": "Genre of the movie",
+        "values": []
+    },
+    "media_1-subtitles": {
+        "description_human": "Boolean flag indicating if subtitles are desired for this movie",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "media_1-directed_by": {
+        "description_human": "Name of the director of the movie",
+        "values": []
+    },
+    "movies_1-price": {
+        "description_human": "Price per ticket",
+        "values": []
+    },
+    "movies_1-number_of_tickets": {
+        "description_human": "Number of the movie tickets to be purchased",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+    "movies_1-show_type": {
+        "description_human": "Type of show",
+        "values": [
+            "regular",
+            "3d",
+            "imax"
+        ]
+    },
+    "movies_1-theater_name": {
+        "description_human": "Name of the theatre",
+        "values": []
+    },
+    "movies_1-show_time": {
+        "description_human": "Time of the show",
+        "values": []
+    },
+    "movies_1-show_date": {
+        "description_human": "Date of the show",
+        "values": []
+    },
+    "movies_1-genre": {
+        "description_human": "Genre of the movie",
+        "values": []
+    },
+    "movies_1-street_address": {
+        "description_human": "Address of the theatre",
+        "values": []
+    },
+    "movies_1-location": {
+        "description_human": "City where the theatre is located",
+        "values": []
+    },
+    "movies_1-movie_name": {
+        "description_human": "Name of the movie",
+        "values": []
+    },
+    "music_1-song_name": {
+        "description_human": "Name of the song",
+        "values": []
+    },
+    "music_1-artist": {
+        "description_human": "Artist who performed the song",
+        "values": []
+    },
+    "music_1-album": {
+        "description_human": "Album the song belongs to",
+        "values": []
+    },
+    "music_1-genre": {
+        "description_human": "Genre of the song",
+        "values": []
+    },
+    "music_1-year": {
+        "description_human": "Year in which the song was released",
+        "values": [
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019"
+        ]
+    },
+    "music_1-playback_device": {
+        "description_human": "Playback device on which the song is to be played",
+        "values": [
+            "TV",
+            "Kitchen speaker",
+            "Bedroom speaker"
+        ]
+    },
+    "music_2-song_name": {
+        "description_human": "Name of the song",
+        "values": []
+    },
+    "music_2-artist": {
+        "description_human": "Name of the artist the song is performed by",
+        "values": []
+    },
+    "music_2-album": {
+        "description_human": "Album the song belongs to",
+        "values": []
+    },
+    "music_2-genre": {
+        "description_human": "Genre of the song",
+        "values": []
+    },
+    "music_2-playback_device": {
+        "description_human": "Playback device on which the song is to be played",
+        "values": [
+            "TV",
+            "kitchen speaker",
+            "bedroom speaker"
+        ]
+    },
+    "rentalcars_1-type": {
+        "description_human": "Category to which rental car belongs",
+        "values": [
+            "Compact",
+            "Standard",
+            "Full-size"
+        ]
+    },
+    "rentalcars_1-car_name": {
+        "description_human": "Model name of rental car",
+        "values": []
+    },
+    "rentalcars_1-pickup_location": {
+        "description_human": "Location of rental car pickup",
+        "values": []
+    },
+    "rentalcars_1-pickup_date": {
+        "description_human": "Date of rental car pickup",
+        "values": []
+    },
+    "rentalcars_1-pickup_time": {
+        "description_human": "Time of rental car pickup",
+        "values": []
+    },
+    "rentalcars_1-pickup_city": {
+        "description_human": "City to pick up the rental car",
+        "values": []
+    },
+    "rentalcars_1-dropoff_date": {
+        "description_human": "Date of rental car drop-off",
+        "values": []
+    },
+    "rentalcars_1-total_price": {
+        "description_human": "Total price of car rental",
+        "values": []
+    },
+    "rentalcars_2-car_type": {
+        "description_human": "Type of car for rental",
+        "values": [
+            "Compact",
+            "Standard",
+            "Full-size"
+        ]
+    },
+    "rentalcars_2-car_name": {
+        "description_human": "Name of car model",
+        "values": []
+    },
+    "rentalcars_2-pickup_location": {
+        "description_human": "Pickup location for car rental",
+        "values": []
+    },
+    "rentalcars_2-pickup_date": {
+        "description_human": "Date of pickup for car rental",
+        "values": []
+    },
+    "rentalcars_2-pickup_time": {
+        "description_human": "Time of pickup for car rental",
+        "values": []
+    },
+    "rentalcars_2-pickup_city": {
+        "description_human": "City in which to pick up rental car",
+        "values": []
+    },
+    "rentalcars_2-dropoff_date": {
+        "description_human": "End date of car rental reservation",
+        "values": []
+    },
+    "rentalcars_2-total_price": {
+        "description_human": "Total price of rental reservation",
+        "values": []
+    },
+    "restaurants_1-restaurant_name": {
+        "description_human": "Name of the restaurant",
+        "values": []
+    },
+    "restaurants_1-date": {
+        "description_human": "Date for the reservation or to find availability",
+        "values": []
+    },
+    "restaurants_1-time": {
+        "description_human": "Time for the reservation or to find availability",
+        "values": []
+    },
+    "restaurants_1-serves_alcohol": {
+        "description_human": "Boolean flag indicating if the restaurant serves alcohol",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "restaurants_1-has_live_music": {
+        "description_human": "Boolean flag indicating if the restaurant has live music",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "restaurants_1-phone_number": {
+        "description_human": "Phone number of the restaurant",
+        "values": []
+    },
+    "restaurants_1-street_address": {
+        "description_human": "Address of the restaurant",
+        "values": []
+    },
+    "restaurants_1-party_size": {
+        "description_human": "Party size for a reservation",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ]
+    },
+    "restaurants_1-price_range": {
+        "description_human": "Price range for the restaurant",
+        "values": [
+            "inexpensive",
+            "moderate",
+            "expensive",
+            "very expensive"
+        ]
+    },
+    "restaurants_1-city": {
+        "description_human": "City in which the restaurant is located",
+        "values": []
+    },
+    "restaurants_1-cuisine": {
+        "description_human": "Cuisine of food served in the restaurant",
+        "values": [
+            "Mexican",
+            "Chinese",
+            "Indian",
+            "American",
+            "Italian"
+        ]
+    },
+    "ridesharing_1-destination": {
+        "description_human": "Destination for taxi ride",
+        "values": []
+    },
+    "ridesharing_1-shared_ride": {
+        "description_human": "Boolean flag whether ride is shared with other passengers",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "ridesharing_1-ride_fare": {
+        "description_human": "Total fare for taxi ride",
+        "values": []
+    },
+    "ridesharing_1-approximate_ride_duration": {
+        "description_human": "Approximate duration of ride to the destination",
+        "values": []
+    },
+    "ridesharing_1-number_of_riders": {
+        "description_human": "Number of riders to call taxi for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "ridesharing_2-destination": {
+        "description_human": "Destination address or location for cab",
+        "values": []
+    },
+    "ridesharing_2-ride_type": {
+        "description_human": "Type of cab ride",
+        "values": [
+            "Pool",
+            "Regular",
+            "Luxury"
+        ]
+    },
+    "ridesharing_2-ride_fare": {
+        "description_human": "Total fare for cab ride",
+        "values": []
+    },
+    "ridesharing_2-wait_time": {
+        "description_human": "Expected waiting time for pick-up by cab",
+        "values": []
+    },
+    "ridesharing_2-number_of_seats": {
+        "description_human": "Number of seats to reserve in the cab",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "services_1-stylist_name": {
+        "description_human": "Name of the hair stylist/salon",
+        "values": []
+    },
+    "services_1-phone_number": {
+        "description_human": "Phone number of the stylist/salon",
+        "values": []
+    },
+    "services_1-average_rating": {
+        "description_human": "Average review rating for the stylist/salon",
+        "values": []
+    },
+    "services_1-is_unisex": {
+        "description_human": "Boolean flag indicating if the salon is unisex",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "services_1-street_address": {
+        "description_human": "Address of the stylist/salon",
+        "values": []
+    },
+    "services_1-city": {
+        "description_human": "City where the salon is located",
+        "values": []
+    },
+    "services_1-appointment_date": {
+        "description_human": "Date for the appointment",
+        "values": []
+    },
+    "services_1-appointment_time": {
+        "description_human": "Time of the appointment",
+        "values": []
+    },
+    "services_2-dentist_name": {
+        "description_human": "Name of the dentist",
+        "values": []
+    },
+    "services_2-phone_number": {
+        "description_human": "Phone number of the dentist",
+        "values": []
+    },
+    "services_2-address": {
+        "description_human": "Address of the dentist",
+        "values": []
+    },
+    "services_2-city": {
+        "description_human": "City where the dentist is located",
+        "values": []
+    },
+    "services_2-appointment_date": {
+        "description_human": "Date for the appointment",
+        "values": []
+    },
+    "services_2-appointment_time": {
+        "description_human": "Time for the appointment",
+        "values": []
+    },
+    "services_2-offers_cosmetic_services": {
+        "description_human": "Boolean flag indicating if the dentist offers cosmetic services",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "services_3-doctor_name": {
+        "description_human": "Name of the doctor or the medical practice",
+        "values": []
+    },
+    "services_3-phone_number": {
+        "description_human": "Contact number for the doctor or the medical practice",
+        "values": []
+    },
+    "services_3-average_rating": {
+        "description_human": "Average review rating of the doctor",
+        "values": []
+    },
+    "services_3-street_address": {
+        "description_human": "Address of the doctor",
+        "values": []
+    },
+    "services_3-city": {
+        "description_human": "City where the doctor is located",
+        "values": []
+    },
+    "services_3-appointment_date": {
+        "description_human": "Date for scheduling the appointment with the doctor",
+        "values": []
+    },
+    "services_3-appointment_time": {
+        "description_human": "Time for the appointment with the doctor",
+        "values": []
+    },
+    "services_3-type": {
+        "description_human": "Speciality of the doctor",
+        "values": [
+            "Gynecologist",
+            "ENT Specialist",
+            "Ophthalmologist",
+            "General Practitioner",
+            "Dermatologist"
+        ]
+    },
+    "travel_1-location": {
+        "description_human": "City or town where the attraction is located",
+        "values": []
+    },
+    "travel_1-attraction_name": {
+        "description_human": "Common name of the attraction",
+        "values": []
+    },
+    "travel_1-category": {
+        "description_human": "Category to which the attraction belongs",
+        "values": [
+            "Place of Worship",
+            "Theme Park",
+            "Museum",
+            "Historical Landmark",
+            "Park",
+            "Tourist Attraction",
+            "Sports Venue",
+            "Shopping Area",
+            "Performing Arts Venue",
+            "Nature Preserve"
+        ]
+    },
+    "travel_1-phone_number": {
+        "description_human": "Phone number to contact the attraction",
+        "values": []
+    },
+    "travel_1-free_entry": {
+        "description_human": "Boolean flag indicating whether entrance to attraction is free",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "travel_1-good_for_kids": {
+        "description_human": "Boolean flag indicating whether attraction is good for to take kids to",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "weather_1-precipitation": {
+        "description_human": "The possibility of rain or snow in percentage",
+        "values": []
+    },
+    "weather_1-humidity": {
+        "description_human": "Percentage humidity",
+        "values": []
+    },
+    "weather_1-wind": {
+        "description_human": "Wind speed in miles per hour",
+        "values": []
+    },
+    "weather_1-temperature": {
+        "description_human": "Temperature in Fahrenheit",
+        "values": []
+    },
+    "weather_1-city": {
+        "description_human": "Name of the city",
+        "values": []
+    },
+    "weather_1-date": {
+        "description_human": "Date for the weather",
+        "values": []
+    },
+    "alarm_1-alarm_time": {
+        "description_human": "Time of the alarm",
+        "values": []
+    },
+    "alarm_1-alarm_name": {
+        "description_human": "Name of the alarm",
+        "values": []
+    },
+    "alarm_1-new_alarm_time": {
+        "description_human": "Time to set for the new alarm",
+        "values": []
+    },
+    "alarm_1-new_alarm_name": {
+        "description_human": "Name to use for the new alarm",
+        "values": []
+    },
+    "banks_2-account_type": {
+        "description_human": "The user's account type",
+        "values": [
+            "checking",
+            "savings"
+        ]
+    },
+    "banks_2-recipient_account_type": {
+        "description_human": "The account type of the recipient to transfer the money to",
+        "values": [
+            "checking",
+            "savings"
+        ]
+    },
+    "banks_2-account_balance": {
+        "description_human": "The balance in the specified account",
+        "values": []
+    },
+    "banks_2-transfer_amount": {
+        "description_human": "The amount of money to transfer",
+        "values": []
+    },
+    "banks_2-recipient_name": {
+        "description_human": "The name of the recipient to transfer the money to",
+        "values": []
+    },
+    "banks_2-transfer_time": {
+        "description_human": "Number of days for the transfer to go through",
+        "values": []
+    },
+    "flights_3-passengers": {
+        "description_human": "Number of passengers to find flight seats for",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    "flights_3-flight_class": {
+        "description_human": "Fare class of flight booking",
+        "values": [
+            "Economy",
+            "Premium Economy",
+            "Business",
+            "First Class"
+        ]
+    },
+    "flights_3-origin_city": {
+        "description_human": "City in which the journey originates",
+        "values": []
+    },
+    "flights_3-destination_city": {
+        "description_human": "City in which the journey ends",
+        "values": []
+    },
+    "flights_3-origin_airport_name": {
+        "description_human": "Number of the airport flying out from",
+        "values": []
+    },
+    "flights_3-destination_airport_name": {
+        "description_human": "Number of the airport flying to",
+        "values": []
+    },
+    "flights_3-departure_date": {
+        "description_human": "Date of departure flight",
+        "values": []
+    },
+    "flights_3-return_date": {
+        "description_human": "Date of return flight",
+        "values": []
+    },
+    "flights_3-number_stops": {
+        "description_human": "Number of stops in the itinerary",
+        "values": [
+            "0",
+            "1"
+        ]
+    },
+    "flights_3-outbound_departure_time": {
+        "description_human": "Local time of departure of flight from origin to destination",
+        "values": []
+    },
+    "flights_3-outbound_arrival_time": {
+        "description_human": "Local time of arrival of flight from origin to destination",
+        "values": []
+    },
+    "flights_3-inbound_arrival_time": {
+        "description_human": "Local time of arrival of flight from destination to origin",
+        "values": []
+    },
+    "flights_3-inbound_departure_time": {
+        "description_human": "Local time of departure of flight from destination to origin",
+        "values": []
+    },
+    "flights_3-price": {
+        "description_human": "Price per passenger of the itinerary",
+        "values": []
+    },
+    "flights_3-number_checked_bags": {
+        "description_human": "Number of bags to check in",
+        "values": [
+            "0",
+            "1",
+            "2"
+        ]
+    },
+    "flights_3-airlines": {
+        "description_human": "Name of airline operating the flight",
+        "values": [
+            "United Airlines",
+            "American Airlines",
+            "Delta Airlines",
+            "Southwest Airlines",
+            "Alaska Airlines",
+            "British Airways",
+            "Air Canada",
+            "Air France"
+        ]
+    },
+    "flights_3-arrives_next_day": {
+        "description_human": "Whether the flight arrives the next day",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "hotels_4-location": {
+        "description_human": "City or town where the accommodation is located",
+        "values": []
+    },
+    "hotels_4-number_of_rooms": {
+        "description_human": "Number of rooms to reserve",
+        "values": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "hotels_4-check_in_date": {
+        "description_human": "Check in date for reservation",
+        "values": []
+    },
+    "hotels_4-stay_length": {
+        "description_human": "Length of stay in days",
+        "values": []
+    },
+    "hotels_4-star_rating": {
+        "description_human": "Star rating of the accommodation",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "hotels_4-place_name": {
+        "description_human": "Name of the accommodation",
+        "values": []
+    },
+    "hotels_4-street_address": {
+        "description_human": "Street address of the accommodation",
+        "values": []
+    },
+    "hotels_4-phone_number": {
+        "description_human": "Contact phone number of the accommodation",
+        "values": []
+    },
+    "hotels_4-price_per_night": {
+        "description_human": "Price per night for the stay",
+        "values": []
+    },
+    "hotels_4-smoking_allowed": {
+        "description_human": "Whether or not smoking is allowed inside the place",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "media_2-movie_name": {
+        "description_human": "Name of the movie",
+        "values": []
+    },
+    "media_2-genre": {
+        "description_human": "Main genre of the movie",
+        "values": []
+    },
+    "media_2-subtitle_language": {
+        "description_human": "Language to use for subtitles (or None for no subtitles)",
+        "values": [
+            "None",
+            "English",
+            "Mandarin",
+            "Spanish"
+        ]
+    },
+    "media_2-director": {
+        "description_human": "Name of the director of the movie",
+        "values": []
+    },
+    "media_2-actors": {
+        "description_human": "Name of an actor starring in the movie",
+        "values": []
+    },
+    "media_2-price": {
+        "description_human": "Cost of renting movie",
+        "values": []
+    },
+    "movies_2-title": {
+        "description_human": "Title for movie",
+        "values": []
+    },
+    "movies_2-genre": {
+        "description_human": "Genre of the movie",
+        "values": []
+    },
+    "movies_2-aggregate_rating": {
+        "description_human": "Aggregate user rating for movie, scale of 10",
+        "values": []
+    },
+    "movies_2-starring": {
+        "description_human": "Name of actor starring in movie",
+        "values": []
+    },
+    "movies_2-director": {
+        "description_human": "Name of director of the movie",
+        "values": []
+    },
+    "restaurants_2-restaurant_name": {
+        "description_human": "Name of the restaurant",
+        "values": []
+    },
+    "restaurants_2-date": {
+        "description_human": "Tentative date of restaurant reservation",
+        "values": []
+    },
+    "restaurants_2-time": {
+        "description_human": "Tentative time of restaurant reservation",
+        "values": []
+    },
+    "restaurants_2-has_seating_outdoors": {
+        "description_human": "Whether the restaurant has outdoor seating available",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "restaurants_2-has_vegetarian_options": {
+        "description_human": "Whether the restaurant has adequate vegetarian options",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "restaurants_2-phone_number": {
+        "description_human": "Phone number to contact restaurant",
+        "values": []
+    },
+    "restaurants_2-rating": {
+        "description_human": "Average user rating for restaurant on a scale of 5",
+        "values": []
+    },
+    "restaurants_2-address": {
+        "description_human": "Address of restaurant",
+        "values": []
+    },
+    "restaurants_2-number_of_seats": {
         "description_human": "Number of seats to reserve at the restaurant",
         "values": [
             "1",
@@ -170,22 +1413,157 @@
             "6"
         ]
     },
-    "city-of-event": {
-        "description_human": "City where event is happening",
+    "restaurants_2-price_range": {
+        "description_human": "Price range for the restaurant",
+        "values": [
+            "cheap",
+            "moderate",
+            "pricey",
+            "ultra high-end"
+        ]
+    },
+    "restaurants_2-location": {
+        "description_human": "City where the restaurant is located",
         "values": []
     },
-    "address-of-location": {
-        "description_human": "Street address of event location",
+    "restaurants_2-category": {
+        "description_human": "The category of food offered by the restaurant",
         "values": []
     },
-    "event-type": {
+    "services_4-therapist_name": {
+        "description_human": "Name of the therapist",
+        "values": []
+    },
+    "services_4-phone_number": {
+        "description_human": "Contact number of the therapist",
+        "values": []
+    },
+    "services_4-address": {
+        "description_human": "Address of the therapist",
+        "values": []
+    },
+    "services_4-city": {
+        "description_human": "Area where user wants to search for a therapist",
+        "values": []
+    },
+    "services_4-appointment_date": {
+        "description_human": "Date of the appointment",
+        "values": []
+    },
+    "services_4-appointment_time": {
+        "description_human": "Time of the appointment",
+        "values": []
+    },
+    "services_4-type": {
+        "description_human": "Type of the therapist",
+        "values": [
+            "Psychologist",
+            "Family Counselor",
+            "Psychiatrist"
+        ]
+    },
+    "buses_3-from_city": {
+        "description_human": "The city to depart from",
+        "values": []
+    },
+    "buses_3-to_city": {
+        "description_human": "The destination city of the trip",
+        "values": []
+    },
+    "buses_3-from_station": {
+        "description_human": "Name of station of departure",
+        "values": []
+    },
+    "buses_3-to_station": {
+        "description_human": "Name of station of arrival",
+        "values": []
+    },
+    "buses_3-departure_date": {
+        "description_human": "The date of departure",
+        "values": []
+    },
+    "buses_3-departure_time": {
+        "description_human": "The time of departure",
+        "values": []
+    },
+    "buses_3-price": {
+        "description_human": "Ticket price per passenger",
+        "values": []
+    },
+    "buses_3-additional_luggage": {
+        "description_human": "Whether to carry excess baggage in the bus",
+        "values": [
+            "True",
+            "False"
+        ]
+    },
+    "buses_3-num_passengers": {
+        "description_human": "The number of tickets for the trip",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
+    },
+    "buses_3-category": {
+        "description_human": "How many stops the route has",
+        "values": [
+            "direct",
+            "one-stop"
+        ]
+    },
+    "events_3-event_type": {
         "description_human": "Type of cultural event",
         "values": [
             "Music",
             "Theater"
         ]
     },
-    "number-of-tickets": {
+    "events_3-event_name": {
+        "description_human": "Name of artist or play",
+        "values": []
+    },
+    "events_3-date": {
+        "description_human": "Date of event",
+        "values": []
+    },
+    "events_3-time": {
+        "description_human": "Start time of event",
+        "values": []
+    },
+    "events_3-number_of_tickets": {
+        "description_human": "Number of tickets to reserve for the event",
+        "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+    "events_3-price_per_ticket": {
+        "description_human": "Price of each ticket",
+        "values": []
+    },
+    "events_3-city": {
+        "description_human": "City where the event is taking place",
+        "values": []
+    },
+    "events_3-venue": {
+        "description_human": "Exact venue of event",
+        "values": []
+    },
+    "events_3-venue_address": {
+        "description_human": "Street address of event venue",
+        "values": []
+    },
+    "flights_4-number_of_tickets": {
         "description_human": "the number of flight tickets for the trip",
         "values": [
             "1",
@@ -194,28 +1572,7 @@
             "4"
         ]
     },
-    "city": {
-        "description_human": "City where you want to rent the car",
-        "values": []
-    },
-    "venue": {
-        "description_human": "Exact venue of event",
-        "values": []
-    },
-    "venue-address": {
-        "description_human": "Street address of event venue",
-        "values": []
-    },
-    "passengers": {
-        "description_human": "Number of passengers to find flight seats for",
-        "values": [
-            "1",
-            "2",
-            "3",
-            "4"
-        ]
-    },
-    "seating-class": {
+    "flights_4-seating_class": {
         "description_human": "The cabin seat option",
         "values": [
             "Economy",
@@ -223,57 +1580,50 @@
             "Business"
         ]
     },
-    "origin-city": {
-        "description_human": "City in which the journey originates",
-        "values": []
-    },
-    "destination-city": {
-        "description_human": "City in which the journey ends",
-        "values": []
-    },
-    "origin-airport": {
+    "flights_4-origin_airport": {
         "description_human": "The name of the airport or city to depart from",
         "values": []
     },
-    "destination-airport": {
+    "flights_4-destination_airport": {
         "description_human": "The name of the airport or city to arrive at",
         "values": []
     },
-    "return-date": {
+    "flights_4-departure_date": {
+        "description_human": "Start date of the trip",
+        "values": []
+    },
+    "flights_4-return_date": {
         "description_human": "End date of the trip",
         "values": []
     },
-    "number-stops": {
-        "description_human": "Number of stops in the itinerary",
-        "values": [
-            "0",
-            "1"
-        ]
-    },
-    "outbound-departure-time": {
-        "description_human": "Departure time of the flight flying to the destination",
-        "values": []
-    },
-    "outbound-arrival-time": {
-        "description_human": "Arrival time of the flight flying to the destination",
-        "values": []
-    },
-    "inbound-arrival-time": {
-        "description_human": "Arrival time of the flight coming back from the trip",
-        "values": []
-    },
-    "inbound-departure-time": {
-        "description_human": "Departure time of the flight coming back from the trip",
-        "values": []
-    },
-    "refundable": {
-        "description_human": "Whether the booking is refundable or not",
+    "flights_4-is_nonstop": {
+        "description_human": "Whether the flight is a direct one",
         "values": [
             "True",
             "False"
         ]
     },
-    "airlines": {
+    "flights_4-outbound_departure_time": {
+        "description_human": "Departure time of the flight flying to the destination",
+        "values": []
+    },
+    "flights_4-outbound_arrival_time": {
+        "description_human": "Arrival time of the flight flying to the destination",
+        "values": []
+    },
+    "flights_4-inbound_arrival_time": {
+        "description_human": "Arrival time of the flight coming back from the trip",
+        "values": []
+    },
+    "flights_4-inbound_departure_time": {
+        "description_human": "Departure time of the flight coming back from the trip",
+        "values": []
+    },
+    "flights_4-price": {
+        "description_human": "The total cost of the flight tickets",
+        "values": []
+    },
+    "flights_4-airlines": {
         "description_human": "The company that provides air transport services",
         "values": [
             "United Airlines",
@@ -289,52 +1639,52 @@
             "LATAM Brasil"
         ]
     },
-    "is-redeye": {
-        "description_human": "Boolean flag indicating whether the flight is a red-eye flight",
+    "homes_2-intent": {
+        "description_human": "Whether to buy or rent a property",
         "values": [
-            "True",
-            "False"
+            "rent",
+            "buy"
         ]
     },
-    "area": {
+    "homes_2-area": {
         "description_human": "City where the property is located",
         "values": []
     },
-    "address": {
+    "homes_2-address": {
         "description_human": "Street address of property",
         "values": []
     },
-    "property-name": {
+    "homes_2-property_name": {
         "description_human": "Name of property or apartment complex",
         "values": []
     },
-    "phone-number": {
+    "homes_2-phone_number": {
         "description_human": "Contact number of property or apartment complex",
         "values": []
     },
-    "furnished": {
-        "description_human": "Boolean flag indicating if the property is furnished",
+    "homes_2-has_garage": {
+        "description_human": "Whether the property has a garage",
         "values": [
             "True",
             "False"
         ]
     },
-    "pets-allowed": {
-        "description_human": "Boolean flag indicating if pets are allowed",
+    "homes_2-in_unit_laundry": {
+        "description_human": "Whether the property has in-unit laundry facilities",
         "values": [
             "True",
             "False"
         ]
     },
-    "rent": {
-        "description_human": "Rent per month of the apartment",
+    "homes_2-price": {
+        "description_human": "Sale price or per-month rent of property",
         "values": []
     },
-    "visit-date": {
+    "homes_2-visit_date": {
         "description_human": "Date for visit to the property",
         "values": []
     },
-    "number-of-beds": {
+    "homes_2-number_of_beds": {
         "description_human": "Number of bedrooms in the property",
         "values": [
             "1",
@@ -343,7 +1693,7 @@
             "4"
         ]
     },
-    "number-of-baths": {
+    "homes_2-number_of_baths": {
         "description_human": "Number of bathroom in the property",
         "values": [
             "1",
@@ -352,155 +1702,72 @@
             "4"
         ]
     },
-    "number-of-rooms": {
-        "description_human": "Number of rooms to reserve",
-        "values": [
-            "1",
-            "2",
-            "3"
-        ]
-    },
-    "check-in-date": {
-        "description_human": "Check in date for reservation",
-        "values": []
-    },
-    "number-of-days": {
-        "description_human": "Number of days in the reservation",
-        "values": []
-    },
-    "star-rating": {
-        "description_human": "Star rating of the accommodation",
-        "values": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ]
-    },
-    "hotel-name": {
-        "description_human": "name of the hotel",
-        "values": []
-    },
-    "street-address": {
-        "description_human": "Street address of the accommodation",
-        "values": []
-    },
-    "price-per-night": {
-        "description_human": "Price per night for the stay",
-        "values": []
-    },
-    "has-wifi": {
-        "description_human": "Boolean flag indicating if the hotel has wifi",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "where-to": {
-        "description_human": "Location of the house",
-        "values": []
-    },
-    "number-of-adults": {
-        "description_human": "Number of adults to reserve train tickets for",
-        "values": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ]
-    },
-    "check-out-date": {
-        "description_human": "End date for the hotel reservation",
-        "values": []
-    },
-    "rating": {
-        "description_human": "Average user rating for restaurant on a scale of 5",
-        "values": []
-    },
-    "total-price": {
-        "description_human": "Total price of rental reservation",
-        "values": []
-    },
-    "has-laundry-service": {
-        "description_human": "Boolean flag indicating if the house has laundry service",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "location": {
-        "description_human": "Location to share with contact",
-        "values": []
-    },
-    "average-rating": {
-        "description_human": "Average review rating of the doctor",
-        "values": []
-    },
-    "pets-welcome": {
-        "description_human": "Boolean flag indicating if pets are allowed in the hotel",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "title": {
+    "media_3-title": {
         "description_human": "Title of the movie",
         "values": []
     },
-    "genre": {
-        "description_human": "Type of the music",
+    "media_3-genre": {
+        "description_human": "Category of the content",
         "values": []
     },
-    "subtitles": {
-        "description_human": "Boolean flag indicating if subtitles are desired for this movie",
+    "media_3-subtitle_language": {
+        "description_human": "Language of the subtitles",
         "values": [
-            "True",
-            "False"
+            "English",
+            "Spanish",
+            "Hindi",
+            "French"
         ]
     },
-    "directed-by": {
-        "description_human": "Director of the movie",
+    "media_3-starring": {
+        "description_human": "Celebs acting in the movie",
         "values": []
     },
-    "show-type": {
-        "description_human": "Type of show",
-        "values": [
-            "regular",
-            "3d",
-            "imax"
-        ]
-    },
-    "theater-name": {
-        "description_human": "Name of the theatre",
+    "messaging_1-location": {
+        "description_human": "Location to share with contact",
         "values": []
     },
-    "show-time": {
-        "description_human": "Time of the show",
+    "messaging_1-contact_name": {
+        "description_human": "Name of contact to send to",
         "values": []
     },
-    "show-date": {
-        "description_human": "Date of the show",
-        "values": []
-    },
-    "movie-name": {
+    "movies_3-movie_title": {
         "description_human": "Name of the movie",
         "values": []
     },
-    "song-name": {
+    "movies_3-genre": {
+        "description_human": "Type of the movie",
+        "values": []
+    },
+    "movies_3-percent_rating": {
+        "description_human": "Average critic percentage rating",
+        "values": []
+    },
+    "movies_3-cast": {
+        "description_human": "Actors in the movie",
+        "values": []
+    },
+    "movies_3-directed_by": {
+        "description_human": "Director of the movie",
+        "values": []
+    },
+    "music_3-track": {
         "description_human": "Name of the song",
         "values": []
     },
-    "artist": {
+    "music_3-artist": {
         "description_human": "Performer's name",
         "values": []
     },
-    "album": {
+    "music_3-album": {
         "description_human": "Collection of the song",
         "values": []
     },
-    "year": {
+    "music_3-genre": {
+        "description_human": "Type of the music",
+        "values": []
+    },
+    "music_3-year": {
         "description_human": "Year when the song was first released",
         "values": [
             "2010",
@@ -515,47 +1782,38 @@
             "2019"
         ]
     },
-    "playback-device": {
-        "description_human": "Playback device on which the song is to be played",
+    "music_3-device": {
+        "description_human": "Place or name of the media player to play the song selected",
         "values": [
-            "TV",
-            "kitchen speaker",
-            "bedroom speaker"
+            "Living room",
+            "Kitchen",
+            "Patio"
         ]
     },
-    "type": {
-        "description_human": "Type of the therapist",
+    "payment_1-payment_method": {
+        "description_human": "The source of money used for making the payment",
         "values": [
-            "Psychologist",
-            "Family Counselor",
-            "Psychiatrist"
+            "app balance",
+            "debit card",
+            "credit card"
         ]
     },
-    "car-name": {
-        "description_human": "Car model",
+    "payment_1-amount": {
+        "description_human": "The amount of money to send or request",
         "values": []
     },
-    "pickup-location": {
-        "description_human": "Place to pick up the car",
+    "payment_1-receiver": {
+        "description_human": "Name of the contact or account to make the transaction with",
         "values": []
     },
-    "pickup-date": {
-        "description_human": "Date of pickup for car rental",
-        "values": []
+    "payment_1-private_visibility": {
+        "description_human": "Whether the transaction is private or not",
+        "values": [
+            "True",
+            "False"
+        ]
     },
-    "pickup-time": {
-        "description_human": "Time for the pick-up",
-        "values": []
-    },
-    "pickup-city": {
-        "description_human": "City in which to pick up rental car",
-        "values": []
-    },
-    "dropoff-date": {
-        "description_human": "End date of car rental reservation",
-        "values": []
-    },
-    "car-type": {
+    "rentalcars_3-car_type": {
         "description_human": "Type of the car",
         "values": [
             "Hatchback",
@@ -563,297 +1821,71 @@
             "SUV"
         ]
     },
-    "restaurant-name": {
-        "description_human": "name of the restaurant",
+    "rentalcars_3-car_name": {
+        "description_human": "Car model",
         "values": []
     },
-    "serves-alcohol": {
-        "description_human": "Boolean flag indicating if the restaurant serves alcohol",
+    "rentalcars_3-pickup_location": {
+        "description_human": "Place to pick up the car",
+        "values": []
+    },
+    "rentalcars_3-start_date": {
+        "description_human": "The first date to start using the rental car",
+        "values": []
+    },
+    "rentalcars_3-pickup_time": {
+        "description_human": "Time for the pick-up",
+        "values": []
+    },
+    "rentalcars_3-city": {
+        "description_human": "City where you want to rent the car",
+        "values": []
+    },
+    "rentalcars_3-end_date": {
+        "description_human": "The date to return the car",
+        "values": []
+    },
+    "rentalcars_3-price_per_day": {
+        "description_human": "The cost for renting the car per day",
+        "values": []
+    },
+    "rentalcars_3-add_insurance": {
+        "description_human": "Whether to purchase insurance",
         "values": [
             "True",
             "False"
         ]
     },
-    "has-live-music": {
-        "description_human": "Boolean flag indicating if the restaurant has live music",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "party-size": {
-        "description_human": "Party size for a reservation",
-        "values": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ]
-    },
-    "price-range": {
-        "description_human": "Price range for the restaurant",
-        "values": [
-            "cheap",
-            "moderate",
-            "pricey",
-            "ultra high-end"
-        ]
-    },
-    "cuisine": {
-        "description_human": "Cuisine of food served in the restaurant",
-        "values": [
-            "Mexican",
-            "Chinese",
-            "Indian",
-            "American",
-            "Italian"
-        ]
-    },
-    "shared-ride": {
-        "description_human": "Boolean flag whether ride is shared with other passengers",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "ride-fare": {
-        "description_human": "Total fare for cab ride",
+    "trains_1-from": {
+        "description_human": "Starting city for train journey",
         "values": []
     },
-    "approximate-ride-duration": {
-        "description_human": "Approximate duration of ride to the destination",
+    "trains_1-to": {
+        "description_human": "Ending city for train journey",
         "values": []
     },
-    "number-of-riders": {
-        "description_human": "Number of riders to call taxi for",
-        "values": [
-            "1",
-            "2",
-            "3",
-            "4"
-        ]
-    },
-    "ride-type": {
-        "description_human": "Type of cab ride",
-        "values": [
-            "Pool",
-            "Regular",
-            "Luxury"
-        ]
-    },
-    "wait-time": {
-        "description_human": "Expected waiting time for pick-up by cab",
+    "trains_1-from_station": {
+        "description_human": "Name of station at starting city",
         "values": []
     },
-    "stylist-name": {
-        "description_human": "Name of the hair stylist/salon",
+    "trains_1-to_station": {
+        "description_human": "Name of station at ending city",
         "values": []
     },
-    "is-unisex": {
-        "description_human": "Boolean flag indicating if the salon is unisex",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "appointment-date": {
-        "description_human": "Date of the appointment",
+    "trains_1-date_of_journey": {
+        "description_human": "Date of train journey",
         "values": []
     },
-    "appointment-time": {
-        "description_human": "Time of the appointment",
+    "trains_1-journey_start_time": {
+        "description_human": "Time of start of train journey",
         "values": []
     },
-    "dentist-name": {
-        "description_human": "Name of the dentist",
+    "trains_1-total": {
+        "description_human": "Total price of train reservation",
         "values": []
     },
-    "offers-cosmetic-services": {
-        "description_human": "Boolean flag indicating if the dentist offers cosmetic services",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "doctor-name": {
-        "description_human": "Name of the doctor or the medical practice",
-        "values": []
-    },
-    "attraction-name": {
-        "description_human": "name of the attraction",
-        "values": []
-    },
-    "free-entry": {
-        "description_human": "Boolean flag indicating whether entrance to attraction is free",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "good-for-kids": {
-        "description_human": "Boolean flag indicating whether attraction is good for to take kids to",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "precipitation": {
-        "description_human": "The possibility of rain or snow in percentage",
-        "values": []
-    },
-    "humidity": {
-        "description_human": "Percentage humidity",
-        "values": []
-    },
-    "wind": {
-        "description_human": "Wind speed in miles per hour",
-        "values": []
-    },
-    "temperature": {
-        "description_human": "Temperature in Fahrenheit",
-        "values": []
-    },
-    "alarm-time": {
-        "description_human": "Time of the alarm",
-        "values": []
-    },
-    "alarm-name": {
-        "description_human": "Name of the alarm",
-        "values": []
-    },
-    "new-alarm-time": {
-        "description_human": "Time to set for the new alarm",
-        "values": []
-    },
-    "new-alarm-name": {
-        "description_human": "Name to use for the new alarm",
-        "values": []
-    },
-    "account-balance": {
-        "description_human": "The balance in the specified account",
-        "values": []
-    },
-    "transfer-amount": {
-        "description_human": "The amount of money to transfer",
-        "values": []
-    },
-    "recipient-name": {
-        "description_human": "The name of the recipient to transfer the money to",
-        "values": []
-    },
-    "transfer-time": {
-        "description_human": "Number of days for the transfer to go through",
-        "values": []
-    },
-    "flight-class": {
-        "description_human": "Fare class of flight booking",
-        "values": [
-            "Economy",
-            "Premium Economy",
-            "Business",
-            "First Class"
-        ]
-    },
-    "origin-airport-name": {
-        "description_human": "Number of the airport flying out from",
-        "values": []
-    },
-    "destination-airport-name": {
-        "description_human": "Number of the airport flying to",
-        "values": []
-    },
-    "number-checked-bags": {
-        "description_human": "Number of bags to check in",
-        "values": [
-            "0",
-            "1",
-            "2"
-        ]
-    },
-    "arrives-next-day": {
-        "description_human": "Whether the flight arrives the next day",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "stay-length": {
-        "description_human": "Length of stay in days",
-        "values": []
-    },
-    "place-name": {
-        "description_human": "Name of the accommodation",
-        "values": []
-    },
-    "smoking-allowed": {
-        "description_human": "Whether or not smoking is allowed inside the place",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "subtitle-language": {
-        "description_human": "Language of the subtitles",
-        "values": [
-            "English",
-            "Spanish",
-            "Hindi",
-            "French"
-        ]
-    },
-    "director": {
-        "description_human": "Name of director of the movie",
-        "values": []
-    },
-    "actors": {
-        "description_human": "Name of an actor starring in the movie",
-        "values": []
-    },
-    "aggregate-rating": {
-        "description_human": "Aggregate user rating for movie, scale of 10",
-        "values": []
-    },
-    "starring": {
-        "description_human": "Celebs acting in the movie",
-        "values": []
-    },
-    "has-seating-outdoors": {
-        "description_human": "Whether the restaurant has outdoor seating available",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "has-vegetarian-options": {
-        "description_human": "Whether the restaurant has adequate vegetarian options",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "therapist-name": {
-        "description_human": "Name of the therapist",
-        "values": []
-    },
-    "from-city": {
-        "description_human": "The city to depart from",
-        "values": []
-    },
-    "to-city": {
-        "description_human": "The destination city of the trip",
-        "values": []
-    },
-    "additional-luggage": {
-        "description_human": "Whether to carry excess baggage in the bus",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "num-passengers": {
-        "description_human": "The number of tickets for the trip",
+    "trains_1-number_of_adults": {
+        "description_human": "Number of adults to reserve train tickets for",
         "values": [
             "1",
             "2",
@@ -862,125 +1894,7 @@
             "5"
         ]
     },
-    "price-per-ticket": {
-        "description_human": "Price of each ticket",
-        "values": []
-    },
-    "is-nonstop": {
-        "description_human": "Whether the flight is a direct one",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "intent": {
-        "description_human": "Whether to buy or rent a property",
-        "values": [
-            "rent",
-            "buy"
-        ]
-    },
-    "has-garage": {
-        "description_human": "Whether the property has a garage",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "in-unit-laundry": {
-        "description_human": "Whether the property has in-unit laundry facilities",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "contact-name": {
-        "description_human": "Name of contact to send to",
-        "values": []
-    },
-    "movie-title": {
-        "description_human": "Name of the movie",
-        "values": []
-    },
-    "percent-rating": {
-        "description_human": "Average critic percentage rating",
-        "values": []
-    },
-    "cast": {
-        "description_human": "Actors in the movie",
-        "values": []
-    },
-    "track": {
-        "description_human": "Name of the song",
-        "values": []
-    },
-    "device": {
-        "description_human": "Place or name of the media player to play the song selected",
-        "values": [
-            "Living room",
-            "Kitchen",
-            "Patio"
-        ]
-    },
-    "payment-method": {
-        "description_human": "The source of money used for making the payment",
-        "values": [
-            "app balance",
-            "debit card",
-            "credit card"
-        ]
-    },
-    "receiver": {
-        "description_human": "Name of the contact or account to make the transaction with",
-        "values": []
-    },
-    "private-visibility": {
-        "description_human": "Whether the transaction is private or not",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "start-date": {
-        "description_human": "The first date to start using the rental car",
-        "values": []
-    },
-    "end-date": {
-        "description_human": "The date to return the car",
-        "values": []
-    },
-    "price-per-day": {
-        "description_human": "The cost for renting the car per day",
-        "values": []
-    },
-    "add-insurance": {
-        "description_human": "Whether to purchase insurance",
-        "values": [
-            "True",
-            "False"
-        ]
-    },
-    "from": {
-        "description_human": "Starting city for train journey",
-        "values": []
-    },
-    "to": {
-        "description_human": "Ending city for train journey",
-        "values": []
-    },
-    "date-of-journey": {
-        "description_human": "Date of train journey",
-        "values": []
-    },
-    "journey-start-time": {
-        "description_human": "Time of start of train journey",
-        "values": []
-    },
-    "total": {
-        "description_human": "Total price of train reservation",
-        "values": []
-    },
-    "class": {
+    "trains_1-class": {
         "description_human": "Fare class for train reservation",
         "values": [
             "Value",
@@ -988,14 +1902,14 @@
             "Business"
         ]
     },
-    "trip-protection": {
+    "trains_1-trip_protection": {
         "description_human": "Whether to add trip protection to reservation, for a fee",
         "values": [
             "True",
             "False"
         ]
     },
-    "hotel-pricerange": {
+    "hotel-hotel-pricerange": {
         "description_human": "price budget of the hotel",
         "values": [
             "expensive",
@@ -1003,14 +1917,14 @@
             "moderate"
         ]
     },
-    "hotel-type": {
+    "hotel-hotel-type": {
         "description_human": "what is the type of the hotel",
         "values": [
             "guesthouse",
             "hotel"
         ]
     },
-    "hotel-parking": {
+    "hotel-hotel-parking": {
         "description_human": "whether the hotel has parking",
         "values": [
             "free",
@@ -1018,7 +1932,7 @@
             "yes"
         ]
     },
-    "hotel-bookday": {
+    "hotel-hotel-bookday": {
         "description_human": "day of the hotel booking",
         "values": [
             "monday",
@@ -1030,7 +1944,7 @@
             "sunday"
         ]
     },
-    "hotel-bookpeople": {
+    "hotel-hotel-bookpeople": {
         "description_human": "number of people for the hotel booking",
         "values": [
             "1",
@@ -1043,7 +1957,7 @@
             "8"
         ]
     },
-    "hotel-bookstay": {
+    "hotel-hotel-bookstay": {
         "description_human": "length of stay at the hotel",
         "values": [
             "1",
@@ -1056,7 +1970,7 @@
             "8"
         ]
     },
-    "hotel-stars": {
+    "hotel-hotel-stars": {
         "description_human": "star rating of the hotel",
         "values": [
             "0",
@@ -1067,7 +1981,7 @@
             "5"
         ]
     },
-    "hotel-internet": {
+    "hotel-hotel-internet": {
         "description_human": "whether the hotel has internet",
         "values": [
             "free",
@@ -1075,7 +1989,11 @@
             "yes"
         ]
     },
-    "hotel-area": {
+    "hotel-hotel-name": {
+        "description_human": "name of the hotel",
+        "values": []
+    },
+    "hotel-hotel-area": {
         "description_human": "area or place of the hotel",
         "values": [
             "centre",
@@ -1085,11 +2003,27 @@
             "west"
         ]
     },
-    "train-arriveby": {
+    "hotel-hotel-address": {
+        "description_human": "address of the hotel",
+        "values": []
+    },
+    "hotel-hotel-phone": {
+        "description_human": "phone number of the hotel",
+        "values": []
+    },
+    "hotel-hotel-postcode": {
+        "description_human": "postal code of the hotel",
+        "values": []
+    },
+    "hotel-hotel-ref": {
+        "description_human": "reference number of the hotel booking",
+        "values": []
+    },
+    "train-train-arriveby": {
         "description_human": "arrival time of the train",
         "values": []
     },
-    "train-departure": {
+    "train-train-departure": {
         "description_human": "departure location of the train",
         "values": [
             "birmingham new street",
@@ -1107,7 +2041,7 @@
             "stevenage"
         ]
     },
-    "train-day": {
+    "train-train-day": {
         "description_human": "day of the train",
         "values": [
             "monday",
@@ -1119,7 +2053,7 @@
             "sunday"
         ]
     },
-    "train-bookpeople": {
+    "train-train-bookpeople": {
         "description_human": "how many train tickets you need",
         "values": [
             "0",
@@ -1136,11 +2070,11 @@
             "15"
         ]
     },
-    "train-leaveat": {
+    "train-train-leaveat": {
         "description_human": "leaving time for the train",
         "values": []
     },
-    "train-destination": {
+    "train-train-destination": {
         "description_human": "destination of the train",
         "values": [
             "birmingham new street",
@@ -1158,7 +2092,23 @@
             "stevenage"
         ]
     },
-    "attraction-area": {
+    "train-train-trainid": {
+        "description_human": "id of the train",
+        "values": []
+    },
+    "train-train-ref": {
+        "description_human": "reference number of the train booking",
+        "values": []
+    },
+    "train-train-price": {
+        "description_human": "price of the train",
+        "values": []
+    },
+    "train-train-duration": {
+        "description_human": "duration of the travel",
+        "values": []
+    },
+    "attraction-attraction-area": {
         "description_human": "area to search for attractions",
         "values": [
             "centre",
@@ -1168,7 +2118,11 @@
             "west"
         ]
     },
-    "attraction-type": {
+    "attraction-attraction-name": {
+        "description_human": "name of the attraction",
+        "values": []
+    },
+    "attraction-attraction-type": {
         "description_human": "type of the attraction",
         "values": [
             "architecture",
@@ -1185,7 +2139,27 @@
             "theatre"
         ]
     },
-    "restaurant-pricerange": {
+    "attraction-attraction-entrancefee": {
+        "description_human": "how much is the entrance fee",
+        "values": []
+    },
+    "attraction-attraction-openhours": {
+        "description_human": "open hours of the attraction",
+        "values": []
+    },
+    "attraction-attraction-address": {
+        "description_human": "address of the attraction",
+        "values": []
+    },
+    "attraction-attraction-phone": {
+        "description_human": "phone number of the attraction",
+        "values": []
+    },
+    "attraction-attraction-postcode": {
+        "description_human": "postal code of the attraction",
+        "values": []
+    },
+    "restaurant-restaurant-pricerange": {
         "description_human": "price budget for the restaurant",
         "values": [
             "cheap",
@@ -1193,7 +2167,7 @@
             "moderate"
         ]
     },
-    "restaurant-area": {
+    "restaurant-restaurant-area": {
         "description_human": "area or place of the restaurant",
         "values": [
             "centre",
@@ -1203,7 +2177,15 @@
             "west"
         ]
     },
-    "restaurant-bookday": {
+    "restaurant-restaurant-food": {
+        "description_human": "the cuisine of the restaurant you are looking for",
+        "values": []
+    },
+    "restaurant-restaurant-name": {
+        "description_human": "name of the restaurant",
+        "values": []
+    },
+    "restaurant-restaurant-bookday": {
         "description_human": "day of the restaurant booking",
         "values": [
             "monday",
@@ -1215,7 +2197,7 @@
             "sunday"
         ]
     },
-    "restaurant-bookpeople": {
+    "restaurant-restaurant-bookpeople": {
         "description_human": "how many people for the restaurant reservation",
         "values": [
             "1",
@@ -1228,37 +2210,73 @@
             "8"
         ]
     },
-    "restaurant-booktime": {
+    "restaurant-restaurant-booktime": {
         "description_human": "time of the restaurant booking",
         "values": []
     },
-    "hospital-department": {
+    "restaurant-restaurant-address": {
+        "description_human": "address of the restaurant",
+        "values": []
+    },
+    "restaurant-restaurant-phone": {
+        "description_human": "phone number of the restaurant",
+        "values": []
+    },
+    "restaurant-restaurant-postcode": {
+        "description_human": "postal code of the restaurant",
+        "values": []
+    },
+    "restaurant-restaurant-ref": {
+        "description_human": "reference number of the restaurant booking",
+        "values": []
+    },
+    "hospital-hospital-department": {
         "description_human": "type of medical care",
         "values": []
     },
-    "taxi-leaveat": {
+    "hospital-hospital-address": {
+        "description_human": "address of the hospital",
+        "values": []
+    },
+    "hospital-hospital-phone": {
+        "description_human": "phone number of the hospital",
+        "values": []
+    },
+    "hospital-hospital-postcode": {
+        "description_human": "postal code of the hospital",
+        "values": []
+    },
+    "taxi-taxi-leaveat": {
         "description_human": "leaving time of taxi",
         "values": []
     },
-    "taxi-destination": {
+    "taxi-taxi-destination": {
         "description_human": "destination of taxi",
         "values": []
     },
-    "taxi-departure": {
+    "taxi-taxi-departure": {
         "description_human": "departure location of taxi",
         "values": []
     },
-    "taxi-arriveby": {
+    "taxi-taxi-arriveby": {
         "description_human": "arrival time of taxi",
         "values": []
     },
-    "bus-departure": {
+    "taxi-taxi-type": {
+        "description_human": "car type of the taxi",
+        "values": []
+    },
+    "taxi-taxi-phone": {
+        "description_human": "phone number of the taxi",
+        "values": []
+    },
+    "bus-bus-departure": {
         "description_human": "departure location of bus",
         "values": [
             "cambridge"
         ]
     },
-    "bus-destination": {
+    "bus-bus-destination": {
         "description_human": "destination of bus",
         "values": [
             "london kings cross",
@@ -1267,13 +2285,29 @@
             "kohinoor"
         ]
     },
-    "bus-day": {
+    "bus-bus-leaveat": {
+        "description_human": "leaving time of bus",
+        "values": []
+    },
+    "bus-bus-day": {
         "description_human": "day to use the bus tickets",
         "values": [
             "wednesday"
         ]
     },
-    "police-name": {
+    "police-police-address": {
+        "description_human": "address of the police station",
+        "values": []
+    },
+    "police-police-phone": {
+        "description_human": "phone number of the police station",
+        "values": []
+    },
+    "police-police-postcode": {
+        "description_human": "postal code of the police station",
+        "values": []
+    },
+    "police-police-name": {
         "description_human": "name of the police station",
         "values": [
             "parkside police station"
