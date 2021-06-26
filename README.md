@@ -22,6 +22,17 @@ use create_data_2_1.py if want to run with multiwoz2.1
 make train
 ```
 
+**Predicting**
+```console
+make test
+```
+
+**Posproecessing**
+```console
+python posprocessing.py T5DST/unseen_pred.json submission.csv
+python posprocessing.py T5DST/seen_pred.json submission.csv
+```
+
 
 
 # Citations

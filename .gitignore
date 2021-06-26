@@ -4,3 +4,5 @@ test.py
 save
 __pycache__
 nohup*
+*.json
+*.csv

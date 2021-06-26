@@ -98,6 +98,7 @@ def predict(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="z
     device = torch.device("cuda:0")
     model.to(device)
     model.eval()
+    print(args["output_file"])
 
     with torch.no_grad():
         for batch in tqdm(test_loader):
@@ -106,7 +107,7 @@ def predict(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="z
                                          attention_mask=batch["attention_mask"].to(
                 device),
                 eos_token_id=tokenizer.eos_token_id,
-                max_length=200,
+                max_length=100,
             )
 
             value_batch = tokenizer.batch_decode(
@@ -126,7 +127,7 @@ def predict(args, tokenizer, model, test_loader, save_path, ALL_SLOTS, prefix="z
                     predictions[dial_id]["turns"][batch["turn_id"][idx]]["pred_belief"].append(
                         str(batch["slot_text"][idx])+'#####'+str(value))
 
-    with open(os.path.join(save_path, f"prediction.json"), 'w') as f:
+    with open(args["output_file"], 'w') as f:
         json.dump(predictions, f, indent=4)
 
     return predictions

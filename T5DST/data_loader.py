@@ -135,6 +135,9 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
                         cur_domain = slot.split("-")[0]
                         if cur_domain not in dial_dict["domains"]:
                             continue
+                        if (slot_values.get(slot, 'none') == "none" and dataset != "test"):
+                            if (random.uniform(0, 1) >= 0.5):
+                                continue
                         # if (dataset != "test"):
                         #     print(slot_values.get(slot, 'none').strip() + f" {tokenizer.eos_token}")
                         
