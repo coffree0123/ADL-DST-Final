@@ -29,8 +29,7 @@ make test
 
 **Posproecessing**
 ```console
-python posprocessing.py T5DST/unseen_pred.json submission.csv
-python posprocessing.py T5DST/seen_pred.json submission.csv
+make posprocess
 ```
 
 
