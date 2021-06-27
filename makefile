@@ -6,4 +6,6 @@ test:
 	bash test.sh data/test_unseen_dials.json unseen_pred.json
 	bash test.sh data/test_seen_dials.json seen_pred.json
 posprocess:
-	python posprocessing.py T5DST/unseen_pred.json submission.csv
+	python posprocessing.py T5DST/unseen_pred.json unseen_pred.csv
+	python posprocessing.py T5DST/seen_pred.json seen_pred.csv
+
