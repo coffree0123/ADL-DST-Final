@@ -136,7 +136,7 @@ def read_data(args, path_name, SLOTS, tokenizer, description, dataset=None):
                         if cur_domain not in dial_dict["domains"]:
                             continue
                         if (slot_values.get(slot, 'none') == "none" and dataset != "test"):
-                            if (random.uniform(0, 1) >= 0.5):
+                            if (random.uniform(0, 1) >= 0.8):
                                 continue
                         # if (dataset != "test"):
                         #     print(slot_values.get(slot, 'none').strip() + f" {tokenizer.eos_token}")
@@ -238,7 +238,7 @@ def prepare_data(args, tokenizer):
     data_test, ALL_SLOTS = read_data(args, path_test, ALL_SLOTS, tokenizer, description, "test")
 
 
-    train_dataset = DSTDataset(data_train, args)
+    train_dataset = DSTDataset(data_train + data_dev, args)
     dev_dataset = DSTDataset(data_dev, args)
     test_dataset = DSTDataset(data_test, args)
 
