@@ -10,6 +10,12 @@ Check the packages needed or simply run the command
 pip install -r requirements.txt
 ```
 
+## Download model
+First put data-0625/ under current folder.
+```
+bash download.sh
+```
+
 ## Experiments
 **Dataset**
 ```console

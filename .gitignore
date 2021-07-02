@@ -1,8 +1,8 @@
 .vscode
 data
 test.py
-save
 __pycache__
 nohup*
-*.json
-*.csv
+*pred*
+results
+*save*
