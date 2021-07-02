@@ -22,7 +22,6 @@ First put data-0625/ under current folder.
 ```console
 make create_data
 ```
-use create_data_2_1.py if want to run with multiwoz2.1
 
 **Full-shot training**
 ```console
