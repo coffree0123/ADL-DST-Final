@@ -11,12 +11,13 @@ pip install -r requirements.txt
 ```
 
 ## Download model
-First put data-0625/ under current folder.
 ```
 bash download.sh
 ```
 
 ## Experiments
+First put data-0625/ under current folder.
+
 **Dataset**
 ```console
 make create_data
