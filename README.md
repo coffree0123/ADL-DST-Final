@@ -17,6 +17,7 @@ bash download.sh
 
 ## Training and predicting
 First put data-0625/ under current folder.
+Note: data-0625/ should contain train/, dev/ test_seen/, test_unseen/, schema.json these folders and file.
 
 ### Data preprocessing
 **Dataset**
