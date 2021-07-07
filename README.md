@@ -15,10 +15,11 @@ pip install -r requirements.txt
 bash download.sh
 ```
 
-## Experiments
+## Training and predicting
 First put data-0625/ under current folder.
 
 **Dataset**
+This command will convert original data into T5DST's input form and put the converted data into T5DST folder.
 ```console
 make create_data
 ```
@@ -28,12 +29,13 @@ make create_data
 make train
 ```
 
+For generating the final anser, you need to run both **Predicting** and **Postprocessing** part and the result will be **seen_pred.csv** and **unseen_pred.csv** at the current directory.
 **Predicting**
 ```console
 make test
 ```
 
-**Posproecessing**
+**Postproecessing**
 ```console
 make posprocess
 ```
