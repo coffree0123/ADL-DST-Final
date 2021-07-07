@@ -18,18 +18,21 @@ bash download.sh
 ## Training and predicting
 First put data-0625/ under current folder.
 
+### Data preprocessing
 **Dataset**
 This command will convert original data into T5DST's input form and put the converted data into T5DST folder.
 ```console
 make create_data
 ```
 
+### Training
 **Full-shot training**
 ```console
 make train
 ```
-
+### Generate answer
 For generating the final anser, you need to run both **Predicting** and **Postprocessing** part and the result will be **seen_pred.csv** and **unseen_pred.csv** at the current directory.
+
 **Predicting**
 ```console
 make test
